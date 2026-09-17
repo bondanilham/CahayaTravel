@@ -13,7 +13,7 @@
     <p>Keberangkatan: <%= transaction.Armada.keberangkatan %></p>
     <p>Destinasi: <%= transaction.Armada.destinasi %></p>
     <p>Jumlah Kursi: <%= transaction.jumlahKursi %></p>
-    <p>Total Harga: <%= formataRupiah(transaction.totalHarga) %></p>
+    <p>Total Harga: <%= formatRupiah(transaction.totalHarga) %></p>
 
     <p>Scan QR untuk pembayaran</p>
     <img src="<%= qr %>" alt="QR Code Pembayaran">
