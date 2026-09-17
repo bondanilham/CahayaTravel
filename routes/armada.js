@@ -12,7 +12,7 @@ const middleware = function (req, res, next) {
     // console.log(req.session)
     // console.log('masuk sini');
     if(!req.session.user) {
-        res.redirect(`/user/login?error=Please login first`)
+        return res.redirect(`/user/login?error=Please login first`)
     }else{
         next()
     }
@@ -29,5 +29,7 @@ router.get('/profile/:id', middleware, Controller.getProfile)
 router.post('/profile/:id', middleware, Controller.postProfile)
 router.get('/profile/:id/delete', middleware, Controller.deleteProfile)
 router.get('/delete-armada/:id', middleware, Controller.deleteArmada)
+router.get('/armada/add', middleware, Controller.addArmadaForm)
+router.post('/armada/add', middleware, Controller.postAddArmada)
 
 module.exports = router

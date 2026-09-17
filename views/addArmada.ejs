@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Armada</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>Tambah Armada</h1>
+
+    <% if (error) { %>
+    <div style="color: red;">
+        <%= error %>
+    </div>
+    <% } %>
+
+    <form action="/armada/add" method="post">
+        <p>Keberangkatan:</p>
+        <input type="text" name="keberangkatan">
+
+        <p>Destinasi:</p>
+        <input type="text" name="destinasi">
+
+        <p>Harga:</p>
+        <input type="number" name="price">
+
+        <p>Total Kursi:</p>
+        <input type="number" name="totalSeats">
+
+        <p>Tipe Kendaraan:</p>
+        <select name="VehicleTypeId">
+            <% vehicleTypes.forEach(vt => { %>
+                <option value="<%= vt.id %>"><%= vt.typeBrand %> <%= vt.typeSeries %></option>
+            <% }) %>
+        </select>
+
+        <br><br>
+        <input type="submit" value="Tambah Armada">
+    </form>
+</body>
+</html>

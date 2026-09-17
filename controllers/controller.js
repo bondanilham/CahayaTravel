@@ -21,30 +21,30 @@ class Controller{
             let sesi = req.session.user
             // console.log(sesi);
             let {keberangkatan, destinasi, penumpang} = req.query
-            let property = {
-                include: [
-                    {
-                        model: VehicleType
-                    }
-                ],
-                where: {},
+            // let property = {
+            //     include: [
+            //         {
+            //             model: VehicleType
+            //         }
+            //     ],
+            //     where: {},
 
-            }
-            // console.log(+penumpang);
-            penumpang = +penumpang
+            // }
+            // // console.log(+penumpang);
+            // penumpang = +penumpang
 
-            if (keberangkatan) {
-                property.where.keberangkatan = {[Op.iLike]:`%${keberangkatan}%`}
-            }
-            if (destinasi) {
-                property.where.destinasi = {[Op.iLike]:`%${destinasi}%`}
-            }
-            if (penumpang) {
-                property.where[Op.and] = sequelize.literal(
-                    `"totalSeats" - "filledSeats" >= ${penumpang}`
-                )
-            }
-            let armada = await Armada.findAll(property)
+            // if (keberangkatan) {
+            //     property.where.keberangkatan = {[Op.iLike]:`%${keberangkatan}%`}
+            // }
+            // if (destinasi) {
+            //     property.where.destinasi = {[Op.iLike]:`%${destinasi}%`}
+            // }
+            // if (penumpang) {
+            //     property.where[Op.and] = sequelize.literal(
+            //         `"totalSeats" - "filledSeats" >= ${penumpang}`
+            //     )
+            // }
+            let armada = await Armada.search({keberangkatan,destinasi, penumpang})
             res.render('findArmada', {armada, keberangkatan, destinasi, penumpang, formatRupiah, sesi})
         } catch (error) {
             console.log(error);
@@ -290,6 +290,41 @@ class Controller{
         }
     }
 
+    static async addArmadaForm(req, res){
+        try {
+            let sesi = req.session.user
+            const {error} = req.query
+            const vehicleTypes = await VehicleType.findAll()
+            res.render('addArmada', {sesi, vehicleTypes, error})
+        } catch (error) {
+            console.log(error);
+            res.send(error)
+        }
+    }
+
+    static async postAddArmada(req, res){
+        try {
+            const {keberangkatan, destinasi, price, totalSeats, VehicleTypeId} = req.body
+
+            await Armada.create({
+                keberangkatan,
+                destinasi,
+                price: Number(price),
+                totalSeats: Number(totalSeats),
+                VehicleTypeId: Number(VehicleTypeId)
+            })
+
+            res.redirect('/find-armada')
+        } catch (error) {
+            if (error.name === "SequelizeValidationError") {
+                let messages = error.errors.map(el => el.message)
+                return res.redirect(`/armada/add?error=${messages}`)
+            }
+            console.log(error);
+            res.send(error)
+        }
+    }
+    
     static async deleteArmada(req,res){
         try {
             const {id} = req.params
