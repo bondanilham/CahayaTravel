@@ -7,12 +7,41 @@
 </head>
 <body>
     <%- include('partials/header') %>
-    <table>
+    <h1>Riwayat Transaksi</h1>
+    <table border="1">
         <tr>
-            <th>
-                
-            </th>
+            <th>Nama</th>
+            <th>Jumlah Kursi Dipesan</th>
+            <th>Destinasi</th>
+            <th>Keberangkatan</th>
+            <th>Total Harga</th>
+            <th>Action</th>
         </tr>
+    <% if (record.length === 0) { %>
+        <tr>
+            <td colspan="6">Belum ada transaksi.</td>
+        </tr>
+    <% } %>
+    <% record.forEach(el => { %>
+        <tr>
+            <td><%= el.User.Profile.nama%></td>
+            <td><%= el.jumlahKursi %></td>
+            <td><%= el.Armada.destinasi %></td>
+            <td><%= el.Armada.keberangkatan %></td>
+            <td><%= formatRupiah(el.totalHarga) %></td>
+            <td>
+                <% if (el.paymentStatus === 'Belum Dibayar') { %>
+                <a href="/transactionHistory/<%= el.id %>/payment">Bayar</a>
+                <form action="/transactionHistory/<%= el.id %>/cancel" method="post">
+                    <input type="submit" value="Cancel" style="color: red;">
+                    <!-- <button type="submit" style="color: red;">Cancel</button> -->
+                </form>
+                <% } else { %>
+                <%= el.paymentStatus %>
+                <% } %>
+            </td>
+        </tr>
+    <% }) %>
     </table>
 </body>
 </html>

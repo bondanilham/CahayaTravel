@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
       Armada.belongsTo(models.VehicleType, {foreignKey: 'VehicleTypeId'})
       Armada.hasMany(models.Transaction, {foreignKey: 'ArmadaId'})
     }
+
+    get sisaKursi(){
+      return this.totalSeats - this.filledSeats
+    }
   }
   Armada.init({
     keberangkatan: DataTypes.STRING,

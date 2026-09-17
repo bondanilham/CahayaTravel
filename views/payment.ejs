@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>Pembayaran</h1>
+
+    <p>Nama: <%= transaction.User.Profil %></p>
+    <p>Keberangkatan: <%= transaction.Armada.keberangkatan %></p>
+    <p>Destinasi: <%= transaction.Armada.destinasi %></p>
+    <p>Jumlah Kursi: <%= transaction.jumlahKursi %></p>
+    <p>Total Harga: <%= transaction.totalHarga %></p>
+
+    <p>Scan QR untuk pembayaran</p>
+    <img src="<%= qr %>" alt="QR Code Pembayaran">
+
+    <form action="/transactionHistory/<%= transaction.id %>/payment" method="post">
+        <button type="submit">Bayar</button>
+    </form>
+    <a href="/transactionHistory">Kembali ke halaman transaksi</a>
+</body>
+</html>

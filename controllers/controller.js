@@ -1,4 +1,5 @@
 const { Op } = require("sequelize");
+const QRCode = require("qrcode")
 const {Armada, VehicleType, User, Profile, Transaction, sequelize} = require("../models/index");
 const formatRupiah = require("../helpers/helper");
 
@@ -67,12 +68,20 @@ class Controller{
     static async postBeliTiket(req,res){
         const {id} = req.params
         try {
+            let sesi = req.session.user
             const {jumlahPenumpang} = req.body
             // console.log(req.body);
             let armada = await Armada.findByPk(id)
             armada.filledSeats += Number(jumlahPenumpang);
+            
             await armada.save();
 
+            await Transaction.create({
+                ArmadaId: armada.id,
+                UserId: sesi.id,
+                jumlahKursi: Number(jumlahPenumpang),
+                totalHarga: armada.price * Number(jumlahPenumpang)
+            })
             res.redirect('/transactionHistory')
         } catch (error) {
             if (error.name === "SequelizeValidationError") {
@@ -91,20 +100,110 @@ class Controller{
                     UserId: {
                         [Op.eq]: sesi.id
                     }
-                }
+                },
+                include: [
+                    {   
+                        model: User,
+                        include:[Profile]
+                    },{
+                        model: Armada
+                    }
+                ],
+                order: [['createdAt', 'DESC']]
             })
 
-            res.render('transaction',{sesi, record})
+            res.render('transaction',{sesi, record, formatRupiah})
         } catch (error) {
             console.log(error);
             res.send(error)
         }
     }
 
+    static async showPaymentPage(req, res){
+        try {
+            const sesi = req.session.user
+            const {id} = req.params
+            
+            const transaction = await Transaction.findOne({
+                where: {
+                    id: {[Op.eq]: id},
+                    UserId: {[Op.eq]: sesi.id}
+                },
+                include: [
+                    {   
+                        model: User,
+                        include:[Profile]
+                    },{
+                        model: Armada
+                    }
+                ]
+            })
+
+            if (transaction.statusBayar) {
+                return res.redirect('/transactionHistory')
+            }
+
+            const qr = await QRCode.toDataURL(
+                `CAHAYA-TRAVEL
+                ${transaction.Armada.keberangkatan} - ${transaction.Armada.destinasi}
+                x${transaction.jumlahKursi} kursi|${formatRupiah(transaction.totalHarga)}`
+            )
+
+            res.render('payment', {transaction, sesi, qr, formatRupiah})
+        } catch (error) {
+            console.log(error);
+            res.send(error)
+        }
+    }
+
+    static async payProcess(req, res){
+        try {
+            const sesi = req.session.user
+            const {id} = req.params
+
+            const transaction = await Transaction.findOne({
+                where: {
+                    id: {[Op.eq]: id},
+                    UserId: {[Op.eq]: sesi.id}
+                }
+            })
+
+            await transaction.update({statusBayar: true})
+            res.redirect('/transactionHistory')
+        } catch (error) {
+            console.log(error);
+            res.send(error)
+        }
+    }
+    static async cancelTransaction(req,res){
+        try {
+            const sesi = req.session.user
+            const {id} = req.params
+
+            const transaction = await Transaction.findOne({
+                where: {
+                    id: {[Op.eq]: id},
+                    UserId: {[Op.eq]: sesi.id}
+                },
+                include: [Armada]
+            })
+            // transaction.Armada.filledSeats -= transaction.jumlahKursi
+            let armada = transaction.Armada
+            await armada.update({
+                filledSeats: armada.filledSeats - transaction.jumlahKursi
+            })
+            await transaction.destroy()
+
+            res.redirect('/transactionHistory')
+        } catch (error) {
+            console.log(error);
+            res.send(error)
+        }
+    }
     static async getProfile(req, res){
         try {
             let sesi = req.session.user
-            // const {id} = req.params
+            const {id} = req.params
             const {error, success} = req.query
             let dataProfile = await Profile.findOne({
                 include: [{
@@ -112,11 +211,11 @@ class Controller{
                     attributes: ['email']
                 }],
                 where: {
-                    UserId: sesi.id
+                    UserId: id
                 }
             })
-            console.log(req.session);
-            console.log(dataProfile);
+            // console.log(req.session);
+            // console.log(dataProfile);
             res.render('profile', {dataProfile, error, success, sesi})
         } catch (error) {
             console.log(error);
@@ -194,9 +293,12 @@ class Controller{
     static async deleteArmada(req,res){
         try {
             const {id} = req.params
+            const {keberangkatan, destinasi, penumpang} = req.query
             await Armada.destroy({where: {id: {[Op.eq]: id}}})
+            res.redirect('/find-armada')
         } catch (error) {
-            
+            console.log(error);
+            res.send(error)
         }
     }
 }
