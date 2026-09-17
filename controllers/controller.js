@@ -1,5 +1,5 @@
 const { Op } = require("sequelize");
-const {Armada, VehicleType, User, Profile, sequelize} = require("../models/index");
+const {Armada, VehicleType, User, Profile, Transaction, sequelize} = require("../models/index");
 const formatRupiah = require("../helpers/helper");
 
 class Controller{
@@ -18,6 +18,7 @@ class Controller{
     static async findArmada(req, res){
         try {
             let sesi = req.session.user
+            // console.log(sesi);
             let {keberangkatan, destinasi, penumpang} = req.query
             let property = {
                 include: [
@@ -93,9 +94,10 @@ class Controller{
                 }
             })
 
-            res.render('transaction',record)
+            res.render('transaction',{sesi, record})
         } catch (error) {
-            
+            console.log(error);
+            res.send(error)
         }
     }
 

@@ -58,8 +58,10 @@
             </td>
             <td>
                 <a href="/find-armada/beli/<%= element.id %>?penumpang=<%= penumpang %>">Beli</a>
-                <% if (sesi.role === 'admin') { %>
-                <a href="/delete-armada/<%= element.id %>">Delete</a>
+                <% if (sesi) { %>
+                    <% if (sesi.role === 'admin') { %>
+                    <a href="/delete-armada/<%= element.id %>">Delete</a>
+                    <% } %>
                 <% } %>
             </td>
         </tr>
