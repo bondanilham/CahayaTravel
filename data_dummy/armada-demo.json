@@ -1,0 +1,602 @@
+[
+    {
+      "keberangkatan": "Jember",
+      "destinasi": "Semarang",
+      "price": 300000,
+      "totalSeats": 12,
+      "filledSeats": 0,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Purwokerto",
+      "destinasi": "Yogyakarta",
+      "price": 175000,
+      "totalSeats": 15,
+      "filledSeats": 3,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Probolinggo",
+      "destinasi": "Malang",
+      "price": 350000,
+      "totalSeats": 12,
+      "filledSeats": 7,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Pekanbaru",
+      "destinasi": "Surabaya",
+      "price": 200000,
+      "totalSeats": 10,
+      "filledSeats": 7,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Pekanbaru",
+      "destinasi": "Bandung",
+      "price": 200000,
+      "totalSeats": 13,
+      "filledSeats": 8,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Padang",
+      "destinasi": "Surabaya",
+      "price": 85000,
+      "totalSeats": 12,
+      "filledSeats": 3,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Yogyakarta",
+      "destinasi": "Tegal",
+      "price": 120000,
+      "totalSeats": 12,
+      "filledSeats": 12,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Bandung",
+      "destinasi": "Palembang",
+      "price": 120000,
+      "totalSeats": 13,
+      "filledSeats": 11,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Bogor",
+      "destinasi": "Jember",
+      "price": 85000,
+      "totalSeats": 8,
+      "filledSeats": 1,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Solo",
+      "destinasi": "Semarang",
+      "price": 100000,
+      "totalSeats": 15,
+      "filledSeats": 13,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Denpasar",
+      "destinasi": "Palembang",
+      "price": 150000,
+      "totalSeats": 8,
+      "filledSeats": 0,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Banyuwangi",
+      "destinasi": "Jember",
+      "price": 100000,
+      "totalSeats": 13,
+      "filledSeats": 1,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Jember",
+      "destinasi": "Purwokerto",
+      "price": 150000,
+      "totalSeats": 8,
+      "filledSeats": 8,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Palembang",
+      "destinasi": "Pekanbaru",
+      "price": 150000,
+      "totalSeats": 8,
+      "filledSeats": 5,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Pekanbaru",
+      "destinasi": "Malang",
+      "price": 200000,
+      "totalSeats": 8,
+      "filledSeats": 8,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Cirebon",
+      "destinasi": "Purwokerto",
+      "price": 250000,
+      "totalSeats": 15,
+      "filledSeats": 0,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Bandung",
+      "destinasi": "Banyuwangi",
+      "price": 175000,
+      "totalSeats": 13,
+      "filledSeats": 5,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Balikpapan",
+      "destinasi": "Surabaya",
+      "price": 100000,
+      "totalSeats": 12,
+      "filledSeats": 3,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Madiun",
+      "destinasi": "Probolinggo",
+      "price": 85000,
+      "totalSeats": 12,
+      "filledSeats": 2,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Purwokerto",
+      "destinasi": "Makassar",
+      "price": 300000,
+      "totalSeats": 10,
+      "filledSeats": 10,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Banyuwangi",
+      "destinasi": "Malang",
+      "price": 300000,
+      "totalSeats": 10,
+      "filledSeats": 1,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Palembang",
+      "destinasi": "Solo",
+      "price": 85000,
+      "totalSeats": 8,
+      "filledSeats": 3,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Palembang",
+      "destinasi": "Cirebon",
+      "price": 350000,
+      "totalSeats": 13,
+      "filledSeats": 13,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Medan",
+      "destinasi": "Bandung",
+      "price": 200000,
+      "totalSeats": 10,
+      "filledSeats": 4,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Banyuwangi",
+      "destinasi": "Makassar",
+      "price": 200000,
+      "totalSeats": 12,
+      "filledSeats": 1,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Padang",
+      "destinasi": "Madiun",
+      "price": 200000,
+      "totalSeats": 13,
+      "filledSeats": 6,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Bekasi",
+      "destinasi": "Tegal",
+      "price": 350000,
+      "totalSeats": 13,
+      "filledSeats": 5,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Surabaya",
+      "destinasi": "Madiun",
+      "price": 250000,
+      "totalSeats": 13,
+      "filledSeats": 1,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Malang",
+      "destinasi": "Purwokerto",
+      "price": 100000,
+      "totalSeats": 12,
+      "filledSeats": 5,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Makassar",
+      "destinasi": "Lampung",
+      "price": 300000,
+      "totalSeats": 12,
+      "filledSeats": 4,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Tegal",
+      "destinasi": "Pekanbaru",
+      "price": 200000,
+      "totalSeats": 10,
+      "filledSeats": 7,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Bandung",
+      "destinasi": "Madiun",
+      "price": 250000,
+      "totalSeats": 12,
+      "filledSeats": 9,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Banyuwangi",
+      "destinasi": "Bandung",
+      "price": 200000,
+      "totalSeats": 8,
+      "filledSeats": 6,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Madiun",
+      "destinasi": "Lampung",
+      "price": 120000,
+      "totalSeats": 10,
+      "filledSeats": 0,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Lampung",
+      "destinasi": "Bogor",
+      "price": 100000,
+      "totalSeats": 8,
+      "filledSeats": 2,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Probolinggo",
+      "destinasi": "Banyuwangi",
+      "price": 250000,
+      "totalSeats": 12,
+      "filledSeats": 5,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Bandung",
+      "destinasi": "Jember",
+      "price": 300000,
+      "totalSeats": 10,
+      "filledSeats": 10,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Balikpapan",
+      "destinasi": "Bogor",
+      "price": 350000,
+      "totalSeats": 8,
+      "filledSeats": 2,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Padang",
+      "destinasi": "Makassar",
+      "price": 100000,
+      "totalSeats": 12,
+      "filledSeats": 3,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Madiun",
+      "destinasi": "Malang",
+      "price": 250000,
+      "totalSeats": 13,
+      "filledSeats": 8,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Yogyakarta",
+      "destinasi": "Medan",
+      "price": 300000,
+      "totalSeats": 12,
+      "filledSeats": 11,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Jember",
+      "destinasi": "Palembang",
+      "price": 100000,
+      "totalSeats": 13,
+      "filledSeats": 3,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Surabaya",
+      "destinasi": "Bogor",
+      "price": 100000,
+      "totalSeats": 10,
+      "filledSeats": 7,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Lampung",
+      "destinasi": "Balikpapan",
+      "price": 350000,
+      "totalSeats": 8,
+      "filledSeats": 8,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Palembang",
+      "destinasi": "Malang",
+      "price": 350000,
+      "totalSeats": 10,
+      "filledSeats": 5,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Yogyakarta",
+      "destinasi": "Solo",
+      "price": 300000,
+      "totalSeats": 10,
+      "filledSeats": 3,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Balikpapan",
+      "destinasi": "Purwokerto",
+      "price": 300000,
+      "totalSeats": 15,
+      "filledSeats": 11,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Semarang",
+      "destinasi": "Jember",
+      "price": 175000,
+      "totalSeats": 8,
+      "filledSeats": 1,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Tegal",
+      "destinasi": "Madiun",
+      "price": 250000,
+      "totalSeats": 13,
+      "filledSeats": 8,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Kediri",
+      "destinasi": "Surabaya",
+      "price": 100000,
+      "totalSeats": 10,
+      "filledSeats": 5,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Bogor",
+      "destinasi": "Lampung",
+      "price": 120000,
+      "totalSeats": 15,
+      "filledSeats": 11,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Banyuwangi",
+      "destinasi": "Kediri",
+      "price": 250000,
+      "totalSeats": 10,
+      "filledSeats": 2,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Bandung",
+      "destinasi": "Yogyakarta",
+      "price": 175000,
+      "totalSeats": 15,
+      "filledSeats": 4,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Malang",
+      "destinasi": "Makassar",
+      "price": 350000,
+      "totalSeats": 10,
+      "filledSeats": 5,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Surabaya",
+      "destinasi": "Medan",
+      "price": 350000,
+      "totalSeats": 10,
+      "filledSeats": 10,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Semarang",
+      "destinasi": "Banyuwangi",
+      "price": 350000,
+      "totalSeats": 12,
+      "filledSeats": 9,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Cirebon",
+      "destinasi": "Banyuwangi",
+      "price": 120000,
+      "totalSeats": 10,
+      "filledSeats": 9,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Lampung",
+      "destinasi": "Jember",
+      "price": 85000,
+      "totalSeats": 15,
+      "filledSeats": 10,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Surabaya",
+      "destinasi": "Bandung",
+      "price": 150000,
+      "totalSeats": 15,
+      "filledSeats": 8,
+      "VehicleTypeId": 5
+    },
+    {
+      "keberangkatan": "Pekanbaru",
+      "destinasi": "Jember",
+      "price": 350000,
+      "totalSeats": 8,
+      "filledSeats": 7,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Banyuwangi",
+      "destinasi": "Palembang",
+      "price": 250000,
+      "totalSeats": 13,
+      "filledSeats": 3,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Bogor",
+      "destinasi": "Surabaya",
+      "price": 300000,
+      "totalSeats": 8,
+      "filledSeats": 2,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Bekasi",
+      "destinasi": "Bogor",
+      "price": 120000,
+      "totalSeats": 10,
+      "filledSeats": 5,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Tegal",
+      "destinasi": "Makassar",
+      "price": 120000,
+      "totalSeats": 12,
+      "filledSeats": 6,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Cirebon",
+      "destinasi": "Purwokerto",
+      "price": 150000,
+      "totalSeats": 8,
+      "filledSeats": 5,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Yogyakarta",
+      "destinasi": "Medan",
+      "price": 120000,
+      "totalSeats": 13,
+      "filledSeats": 3,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Bandung",
+      "destinasi": "Palembang",
+      "price": 250000,
+      "totalSeats": 13,
+      "filledSeats": 13,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Malang",
+      "destinasi": "Makassar",
+      "price": 150000,
+      "totalSeats": 15,
+      "filledSeats": 10,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Bekasi",
+      "destinasi": "Cirebon",
+      "price": 175000,
+      "totalSeats": 13,
+      "filledSeats": 7,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Jakarta",
+      "destinasi": "Surabaya",
+      "price": 300000,
+      "totalSeats": 13,
+      "filledSeats": 8,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Solo",
+      "destinasi": "Kediri",
+      "price": 85000,
+      "totalSeats": 12,
+      "filledSeats": 0,
+      "VehicleTypeId": 3
+    },
+    {
+      "keberangkatan": "Bekasi",
+      "destinasi": "Jember",
+      "price": 350000,
+      "totalSeats": 13,
+      "filledSeats": 4,
+      "VehicleTypeId": 1
+    },
+    {
+      "keberangkatan": "Yogyakarta",
+      "destinasi": "Pekanbaru",
+      "price": 200000,
+      "totalSeats": 10,
+      "filledSeats": 4,
+      "VehicleTypeId": 4
+    },
+    {
+      "keberangkatan": "Balikpapan",
+      "destinasi": "Bandung",
+      "price": 350000,
+      "totalSeats": 13,
+      "filledSeats": 0,
+      "VehicleTypeId": 2
+    },
+    {
+      "keberangkatan": "Balikpapan",
+      "destinasi": "Purwokerto",
+      "price": 250000,
+      "totalSeats": 12,
+      "filledSeats": 1,
+      "VehicleTypeId": 5
+    }
+  ]

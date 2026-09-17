@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile List | Cahaya Travel</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div>
+        <% if(hapus) { %>
+            <p style="color: red;">User <%= hapus %> telah dihapus.</p>
+        <% } %>
+    </div>
+    <div>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>User ID</th>
+                <th>KTP</th>
+                <th>Phone Number</th>
+                <th>Action</th>
+            </tr>
+            <% admin.forEach(el => { %>
+            <tr>
+                <th><%= el.nama %></th>
+                <th><%= el.UserId %></th>
+                <th><%= el.ktp %></th>
+                <th><%= el.phoneNumber %></th>
+                <th>
+                    <a href="/profile/<%= el.User.id %>">
+                        <button>Detail</button>
+                    </a>
+                    <a href="/profile/<%= el.User.id %>/delete">
+                        <button>Delete</button>
+                    </a>
+                </th>
+            </tr>
+            <% }) %>
+        </table>
+    </div>
+</body>
+</html>

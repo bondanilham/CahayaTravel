@@ -1,0 +1,22 @@
+[
+    {
+      "typeBrand": "Toyota",
+      "typeSeries": "HiAce Commuter"
+    },
+    {
+      "typeBrand": "Toyota",
+      "typeSeries": "HiAce Premio"
+    },
+    {
+      "typeBrand": "Isuzu",
+      "typeSeries": "Elf NLR"
+    },
+    {
+      "typeBrand": "Daihatsu",
+      "typeSeries": "Gran Max Blind Van"
+    },
+    {
+      "typeBrand": "Hyundai",
+      "typeSeries": "H-1 Royale"
+    }
+  ]

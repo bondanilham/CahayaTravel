@@ -1,0 +1,102 @@
+[
+    {
+      "email": "budi.nugroho29@yahoo.com",
+      "password": "$2b$10$TP3fAbnFbmOHnKYaXRvj7uff0LYTH8xIZM1JRcoreogr",
+      "role": "user"
+    },
+    {
+      "email": "umi.yulianti92@outlook.com",
+      "password": "$2b$10$nE2NiiUHUAKw9iEU1jjQKxKDpI6Qh2UVvsjaSS8VFgM0",
+      "role": "user"
+    },
+    {
+      "email": "rudi.wibowo71@yahoo.com",
+      "password": "$2b$10$q2AnHTmt9OBGhnuKoneNo41eoPni6JDWYlgAACTP9gyv",
+      "role": "user"
+    },
+    {
+      "email": "sinta.permata8@yahoo.com",
+      "password": "$2b$10$x9qWCA79ISjs8JHUdKF0j7elKPoh3pKMzKG5mSoyPstU",
+      "role": "admin"
+    },
+    {
+      "email": "umi.pratama18@outlook.com",
+      "password": "$2b$10$hgIqLSmNqE40fAraVNqTIAae24HZKjht3X13npgW2zMj",
+      "role": "user"
+    },
+    {
+      "email": "hendra.kusuma99@outlook.com",
+      "password": "$2b$10$vFQ0ub2qJ8cKvWB9h3lcBGYQ6TmA65MPh3FPuRIlPxUk",
+      "role": "user"
+    },
+    {
+      "email": "lukman.rahmawati26@yahoo.com",
+      "password": "$2b$10$bpD0ezNmREpOaUVgAk7Gdp0CXP9K63LSFZH3UDqpNVGM",
+      "role": "user"
+    },
+    {
+      "email": "bambang.yulianti90@gmail.com",
+      "password": "$2b$10$1VxavU07zUHLnnBbuQzkChMbyIbNiCdxnuVxUZpfbH9v",
+      "role": "user"
+    },
+    {
+      "email": "umi.rahmawati87@mail.com",
+      "password": "$2b$10$ySeQMgV0Lh8WvAwFv0Yg7NZRBT7qYHDBTq0Zf2pCLxb0",
+      "role": "user"
+    },
+    {
+      "email": "bambang.setiawan85@outlook.com",
+      "password": "$2b$10$DGAUuRqphlhHVlnES8GrgmolaHr8IRh1E2JDBld6DYye",
+      "role": "user"
+    },
+    {
+      "email": "nanda.pratama98@yahoo.com",
+      "password": "$2b$10$MqfoIjzQDcrr1eoqXKXmhnjqidXKZ5BDsyqHBL3TLboP",
+      "role": "user"
+    },
+    {
+      "email": "wati.permata98@gmail.com",
+      "password": "$2b$10$Ctu8zF9OHzlwUMVmI5BRh8LojIIf94ChZESFqZ8pIx5F",
+      "role": "user"
+    },
+    {
+      "email": "indah.permata53@gmail.com",
+      "password": "$2b$10$tD4x9XOj7h7ug0g4ai18eWqMyeuPH7M3EHMoQrof8VRg",
+      "role": "user"
+    },
+    {
+      "email": "lestari.halim33@mail.com",
+      "password": "$2b$10$paX3QjBvKNAp0mxDoJJ9s8OrJQUdLE4rXLvNMQSOZM4O",
+      "role": "user"
+    },
+    {
+      "email": "rudi.setiawan87@mail.com",
+      "password": "$2b$10$7XwXaHCPPKY6gob2I4ndZ4szi6sEg3iCPU6zUjzgEz6c",
+      "role": "user"
+    },
+    {
+      "email": "andi.kurniawan76@yahoo.com",
+      "password": "$2b$10$YoWWKr99HXg1iwWKaqhAhdBwKCnMT4OsNb90AgSB3tjh",
+      "role": "user"
+    },
+    {
+      "email": "ayu.firmansyah33@outlook.com",
+      "password": "$2b$10$7QDffAUxid7IPz26A4drtgFjD0vIhroAIVMPILOQbqV5",
+      "role": "user"
+    },
+    {
+      "email": "oki.maulana87@gmail.com",
+      "password": "$2b$10$qPEBqUhArQEPcyLasnipuaUkxRFZXe1cb51JJRzhbuXM",
+      "role": "user"
+    },
+    {
+      "email": "dewi.saputra26@yahoo.com",
+      "password": "$2b$10$LVOkVEUVB5INM1MjeBsrdFtCdZe11MFCIX3BYOtDjdg3",
+      "role": "user"
+    },
+    {
+      "email": "wati.nugroho85@yahoo.com",
+      "password": "$2b$10$uKiv7RyK6txXYPZTQGOAwwln6Eoie0gVZ2cuVixkZVYk",
+      "role": "user"
+    }
+]

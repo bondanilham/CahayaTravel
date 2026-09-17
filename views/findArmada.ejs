@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Armada | Cahaya Travel</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div>
+        <form action="/find-armada" method="get">
+            <label for="keberangkatan">Keberangkatan</label><br>
+            <input type="text" name="keberangkatan" id="keberangkatan" value="<%= keberangkatan %>"><br><br>
+            <label for="destinasi">Destinasi</label><br>
+            <input type="text" name="destinasi" id="destinasi" value="<%= destinasi %>"><br><br>
+            <label for="penumpang">Jumlah Penumpang</label><br>
+            <input type="number" name="penumpang" id="" value="<%= penumpang %>"><br><br>
+            <input type="submit" value="🔍Cari">
+        </form>
+    </div><br>
+    <table>
+        <tr>
+            <th>
+                No
+            </th>
+            <th>
+                Keberangkatan
+            </th>
+            <th>
+                Destinasi
+            </th>
+            <th>
+                Sisa Kursi
+            </th>
+            <th>
+                Harga
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+        <% armada.forEach((element, index) => { %>
+        <tr>
+            <td>
+                <%= index +1 %>
+            </td>
+            <td>
+                <%= element.keberangkatan %>
+            </td>
+            <td>
+                <%= element.destinasi %>
+            </td>
+            <td>
+                <%= element.totalSeats - element.filledSeats %>
+            </td>
+            <td>
+                <%= formatRupiah(element.price) %>
+            </td>
+            <td>
+                <a href="/find-armada/beli/<%= element.id %>?penumpang=<%= penumpang %>">Beli</a>
+                <% if (sesi.role === 'admin') { %>
+                <a href="/delete-armada/<%= element.id %>">Delete</a>
+                <% } %>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<% if (sesi) { %>
+    <header>
+        Cahaya Travel
+        <a href="/">Home</a>
+        <a href="/profile/<%= sesi.id %>">Profile</a>
+        <a href="/transactionHistory">Transaction</a>
+        <a href="/user/logout">Logout</a>
+        <% if (sesi.role === 'admin') { %>
+        <a href="/profile/list">Profile List</a>
+        <% } %>
+    </header>
+<% } else { %>
+ <header>
+        Cahaya Travel
+        <a href="/">Home</a>
+        <a href="/user/login">Profile</a>
+        <a href="/transactionHistory">Transaction</a>
+        <a href="/user/login">Login</a>
+</header>
+<% } %>

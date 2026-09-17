@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    Detail Tiket:
+    <table>
+        <tr>
+            <th>
+                Keberangkatan:
+            </th>
+            <th>
+                Destinasi:
+            </th>
+        </tr>
+        <tr>
+            <td><%= armada.keberangkatan %></td>
+            <td><%= armada.destinasi %></td>
+        </tr>
+    </table>
+    <% if(error)  {%>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+    <form action="/find-armada/beli/<%= id %>" method="post">
+        Jumlah Penumpang:
+        <input type="text" name="jumlahPenumpang" id="" value="<%= penumpang %>">
+        <input type="submit" value="Beli">
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | Cahaya Travel</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>Home</h1>
+    <div>
+        <form action="/find-armada" method="get">
+            <label for="keberangkatan">Keberangkatan</label><br>
+            <input type="text" name="keberangkatan" id="keberangkatan"><br><br>
+            <label for="destinasi">Destinasi</label><br>
+            <input type="text" name="destinasi" id="destinasi"><br><br>
+            <label for="penumpang">Jumlah Penumpang</label><br>
+            <input type="number" name="penumpang" id=""><br><br>
+            <input type="submit" value="🔍Cari">
+        </form>
+    </div>
+</body>
+</html>

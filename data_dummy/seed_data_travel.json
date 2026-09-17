@@ -1,0 +1,890 @@
+{
+  "Users": [
+    {
+      "email": "budi.nugroho29@yahoo.com",
+      "userName": "budinugroho251",
+      "password": "$2b$10$TP3fAbnFbmOHnKYaXRvj7uff0LYTH8xIZM1JRcoreogr",
+      "role": "user"
+    },
+    {
+      "email": "umi.yulianti92@outlook.com",
+      "userName": "umiyulianti898",
+      "password": "$2b$10$nE2NiiUHUAKw9iEU1jjQKxKDpI6Qh2UVvsjaSS8VFgM0",
+      "role": "user"
+    },
+    {
+      "email": "rudi.wibowo71@yahoo.com",
+      "userName": "rudiwibowo970",
+      "password": "$2b$10$q2AnHTmt9OBGhnuKoneNo41eoPni6JDWYlgAACTP9gyv",
+      "role": "user"
+    },
+    {
+      "email": "sinta.permata8@yahoo.com",
+      "userName": "sintapermata925",
+      "password": "$2b$10$x9qWCA79ISjs8JHUdKF0j7elKPoh3pKMzKG5mSoyPstU",
+      "role": "admin"
+    },
+    {
+      "email": "umi.pratama18@outlook.com",
+      "userName": "umipratama962",
+      "password": "$2b$10$hgIqLSmNqE40fAraVNqTIAae24HZKjht3X13npgW2zMj",
+      "role": "user"
+    },
+    {
+      "email": "hendra.kusuma99@outlook.com",
+      "userName": "hendrakusuma991",
+      "password": "$2b$10$vFQ0ub2qJ8cKvWB9h3lcBGYQ6TmA65MPh3FPuRIlPxUk",
+      "role": "user"
+    },
+    {
+      "email": "lukman.rahmawati26@yahoo.com",
+      "userName": "lukmanrahmawati231",
+      "password": "$2b$10$bpD0ezNmREpOaUVgAk7Gdp0CXP9K63LSFZH3UDqpNVGM",
+      "role": "user"
+    },
+    {
+      "email": "bambang.yulianti90@gmail.com",
+      "userName": "bambangyulianti969",
+      "password": "$2b$10$1VxavU07zUHLnnBbuQzkChMbyIbNiCdxnuVxUZpfbH9v",
+      "role": "user"
+    },
+    {
+      "email": "umi.rahmawati87@mail.com",
+      "userName": "umirahmawati590",
+      "password": "$2b$10$ySeQMgV0Lh8WvAwFv0Yg7NZRBT7qYHDBTq0Zf2pCLxb0",
+      "role": "user"
+    },
+    {
+      "email": "bambang.setiawan85@outlook.com",
+      "userName": "bambangsetiawan314",
+      "password": "$2b$10$DGAUuRqphlhHVlnES8GrgmolaHr8IRh1E2JDBld6DYye",
+      "role": "user"
+    },
+    {
+      "email": "nanda.pratama98@yahoo.com",
+      "userName": "nandapratama971",
+      "password": "$2b$10$MqfoIjzQDcrr1eoqXKXmhnjqidXKZ5BDsyqHBL3TLboP",
+      "role": "user"
+    },
+    {
+      "email": "wati.permata98@gmail.com",
+      "userName": "watipermata834",
+      "password": "$2b$10$Ctu8zF9OHzlwUMVmI5BRh8LojIIf94ChZESFqZ8pIx5F",
+      "role": "user"
+    },
+    {
+      "email": "indah.permata53@gmail.com",
+      "userName": "indahpermata240",
+      "password": "$2b$10$tD4x9XOj7h7ug0g4ai18eWqMyeuPH7M3EHMoQrof8VRg",
+      "role": "user"
+    },
+    {
+      "email": "lestari.halim33@mail.com",
+      "userName": "lestarihalim654",
+      "password": "$2b$10$paX3QjBvKNAp0mxDoJJ9s8OrJQUdLE4rXLvNMQSOZM4O",
+      "role": "user"
+    },
+    {
+      "email": "rudi.setiawan87@mail.com",
+      "userName": "rudisetiawan881",
+      "password": "$2b$10$7XwXaHCPPKY6gob2I4ndZ4szi6sEg3iCPU6zUjzgEz6c",
+      "role": "user"
+    },
+    {
+      "email": "andi.kurniawan76@yahoo.com",
+      "userName": "andikurniawan213",
+      "password": "$2b$10$YoWWKr99HXg1iwWKaqhAhdBwKCnMT4OsNb90AgSB3tjh",
+      "role": "user"
+    },
+    {
+      "email": "ayu.firmansyah33@outlook.com",
+      "userName": "ayufirmansyah682",
+      "password": "$2b$10$7QDffAUxid7IPz26A4drtgFjD0vIhroAIVMPILOQbqV5",
+      "role": "user"
+    },
+    {
+      "email": "oki.maulana87@gmail.com",
+      "userName": "okimaulana51",
+      "password": "$2b$10$qPEBqUhArQEPcyLasnipuaUkxRFZXe1cb51JJRzhbuXM",
+      "role": "user"
+    },
+    {
+      "email": "dewi.saputra26@yahoo.com",
+      "userName": "dewisaputra263",
+      "password": "$2b$10$LVOkVEUVB5INM1MjeBsrdFtCdZe11MFCIX3BYOtDjdg3",
+      "role": "user"
+    },
+    {
+      "email": "wati.nugroho85@yahoo.com",
+      "userName": "watinugroho742",
+      "password": "$2b$10$uKiv7RyK6txXYPZTQGOAwwln6Eoie0gVZ2cuVixkZVYk",
+      "role": "user"
+    }
+  ],
+  "Profiles": [
+    {
+      "nama": "Budi Nugroho",
+      "foto": "https://storage.example.com/profiles/budinugroho251.jpg",
+      "ktp": "5255341928327648",
+      "phoneNumber": "083503056413",
+      "UserId": 1
+    },
+    {
+      "nama": "Umi Yulianti",
+      "foto": "https://storage.example.com/profiles/umiyulianti898.jpg",
+      "ktp": "8932528809570154",
+      "phoneNumber": "083039117182",
+      "UserId": 2
+    },
+    {
+      "nama": "Rudi Wibowo",
+      "foto": "https://storage.example.com/profiles/rudiwibowo970.jpg",
+      "ktp": "1333872624731781",
+      "phoneNumber": "080801326773",
+      "UserId": 3
+    },
+    {
+      "nama": "Sinta Permata",
+      "foto": "https://storage.example.com/profiles/sintapermata925.jpg",
+      "ktp": "1079911838425135",
+      "phoneNumber": "084278498084",
+      "UserId": 4
+    },
+    {
+      "nama": "Umi Pratama",
+      "foto": "https://storage.example.com/profiles/umipratama962.jpg",
+      "ktp": "3226025634216073",
+      "phoneNumber": "083754330365",
+      "UserId": 5
+    },
+    {
+      "nama": "Hendra Kusuma",
+      "foto": "https://storage.example.com/profiles/hendrakusuma991.jpg",
+      "ktp": "9468044369957773",
+      "phoneNumber": "088721489513",
+      "UserId": 6
+    },
+    {
+      "nama": "Lukman Rahmawati",
+      "foto": "https://storage.example.com/profiles/lukmanrahmawati231.jpg",
+      "ktp": "4714345581223623",
+      "phoneNumber": "081665876036",
+      "UserId": 7
+    },
+    {
+      "nama": "Bambang Yulianti",
+      "foto": "https://storage.example.com/profiles/bambangyulianti969.jpg",
+      "ktp": "1003309232719374",
+      "phoneNumber": "085299124190",
+      "UserId": 8
+    },
+    {
+      "nama": "Umi Rahmawati",
+      "foto": "https://storage.example.com/profiles/umirahmawati590.jpg",
+      "ktp": "2735454948083136",
+      "phoneNumber": "087837770143",
+      "UserId": 9
+    },
+    {
+      "nama": "Bambang Setiawan",
+      "foto": "https://storage.example.com/profiles/bambangsetiawan314.jpg",
+      "ktp": "0229413186999386",
+      "phoneNumber": "087749649909",
+      "UserId": 10
+    },
+    {
+      "nama": "Nanda Pratama",
+      "foto": "https://storage.example.com/profiles/nandapratama971.jpg",
+      "ktp": "9904902787429671",
+      "phoneNumber": "087565512567",
+      "UserId": 11
+    },
+    {
+      "nama": "Wati Permata",
+      "foto": "https://storage.example.com/profiles/watipermata834.jpg",
+      "ktp": "2146584044997278",
+      "phoneNumber": "087558867533",
+      "UserId": 12
+    },
+    {
+      "nama": "Indah Permata",
+      "foto": "https://storage.example.com/profiles/indahpermata240.jpg",
+      "ktp": "2400504556238692",
+      "phoneNumber": "082219693792",
+      "UserId": 13
+    },
+    {
+      "nama": "Lestari Halim",
+      "foto": "https://storage.example.com/profiles/lestarihalim654.jpg",
+      "ktp": "4709521456232858",
+      "phoneNumber": "088424745171",
+      "UserId": 14
+    },
+    {
+      "nama": "Rudi Setiawan",
+      "foto": "https://storage.example.com/profiles/rudisetiawan881.jpg",
+      "ktp": "5377351585064317",
+      "phoneNumber": "081390053293",
+      "UserId": 15
+    },
+    {
+      "nama": "Andi Kurniawan",
+      "foto": "https://storage.example.com/profiles/andikurniawan213.jpg",
+      "ktp": "9985698478961183",
+      "phoneNumber": "086736576615",
+      "UserId": 16
+    },
+    {
+      "nama": "Ayu Firmansyah",
+      "foto": "https://storage.example.com/profiles/ayufirmansyah682.jpg",
+      "ktp": "5022961201836675",
+      "phoneNumber": "082545991022",
+      "UserId": 17
+    },
+    {
+      "nama": "Oki Maulana",
+      "foto": "https://storage.example.com/profiles/okimaulana51.jpg",
+      "ktp": "5161369681645352",
+      "phoneNumber": "081818835523",
+      "UserId": 18
+    },
+    {
+      "nama": "Dewi Saputra",
+      "foto": "https://storage.example.com/profiles/dewisaputra263.jpg",
+      "ktp": "5182037788925546",
+      "phoneNumber": "086590515186",
+      "UserId": 19
+    },
+    {
+      "nama": "Wati Nugroho",
+      "foto": "https://storage.example.com/profiles/watinugroho742.jpg",
+      "ktp": "7065379473834735",
+      "phoneNumber": "089774688623",
+      "UserId": 20
+    }
+  ],
+  "Armadas": [
+    {
+      "tujuan": "Jember",
+      "destinasi": "Semarang",
+      "price": 300000,
+      "totalSeats": 40,
+      "filledSeats": 3,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Purwokerto",
+      "destinasi": "Yogyakarta",
+      "price": 175000,
+      "totalSeats": 48,
+      "filledSeats": 7,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Probolinggo",
+      "destinasi": "Malang",
+      "price": 350000,
+      "totalSeats": 40,
+      "filledSeats": 28,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Pekanbaru",
+      "destinasi": "Surabaya",
+      "price": 200000,
+      "totalSeats": 32,
+      "filledSeats": 28,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Pekanbaru",
+      "destinasi": "Bandung",
+      "price": 200000,
+      "totalSeats": 44,
+      "filledSeats": 32,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Padang",
+      "destinasi": "Surabaya",
+      "price": 85000,
+      "totalSeats": 40,
+      "filledSeats": 14,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Yogyakarta",
+      "destinasi": "Tegal",
+      "price": 120000,
+      "totalSeats": 40,
+      "filledSeats": 9,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Palembang",
+      "destinasi": "Bekasi",
+      "price": 300000,
+      "totalSeats": 32,
+      "filledSeats": 30,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Jakarta",
+      "destinasi": "Surabaya",
+      "price": 150000,
+      "totalSeats": 28,
+      "filledSeats": 8,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Purwokerto",
+      "destinasi": "Madiun",
+      "price": 250000,
+      "totalSeats": 48,
+      "filledSeats": 33,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Probolinggo",
+      "destinasi": "Palembang",
+      "price": 100000,
+      "totalSeats": 32,
+      "filledSeats": 19,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Denpasar",
+      "destinasi": "Pekanbaru",
+      "price": 100000,
+      "totalSeats": 48,
+      "filledSeats": 29,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Bekasi",
+      "destinasi": "Jember",
+      "price": 350000,
+      "totalSeats": 48,
+      "filledSeats": 1,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Denpasar",
+      "destinasi": "Tegal",
+      "price": 250000,
+      "totalSeats": 32,
+      "filledSeats": 18,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Jember",
+      "destinasi": "Balikpapan",
+      "price": 120000,
+      "totalSeats": 32,
+      "filledSeats": 26,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Cirebon",
+      "destinasi": "Balikpapan",
+      "price": 350000,
+      "totalSeats": 28,
+      "filledSeats": 16,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Cirebon",
+      "destinasi": "Purwokerto",
+      "price": 300000,
+      "totalSeats": 28,
+      "filledSeats": 12,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Banyuwangi",
+      "destinasi": "Padang",
+      "price": 85000,
+      "totalSeats": 40,
+      "filledSeats": 16,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Surabaya",
+      "destinasi": "Balikpapan",
+      "price": 200000,
+      "totalSeats": 32,
+      "filledSeats": 6,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Bandung",
+      "destinasi": "Balikpapan",
+      "price": 120000,
+      "totalSeats": 48,
+      "filledSeats": 21,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Tegal",
+      "destinasi": "Bekasi",
+      "price": 100000,
+      "totalSeats": 32,
+      "filledSeats": 8,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Bandung",
+      "destinasi": "Palembang",
+      "price": 150000,
+      "totalSeats": 32,
+      "filledSeats": 2,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Makassar",
+      "destinasi": "Palembang",
+      "price": 350000,
+      "totalSeats": 48,
+      "filledSeats": 25,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Medan",
+      "destinasi": "Bandung",
+      "price": 200000,
+      "totalSeats": 32,
+      "filledSeats": 18,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Banyuwangi",
+      "destinasi": "Makassar",
+      "price": 200000,
+      "totalSeats": 40,
+      "filledSeats": 7,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Padang",
+      "destinasi": "Madiun",
+      "price": 200000,
+      "totalSeats": 44,
+      "filledSeats": 24,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Bekasi",
+      "destinasi": "Tegal",
+      "price": 350000,
+      "totalSeats": 44,
+      "filledSeats": 23,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Surabaya",
+      "destinasi": "Madiun",
+      "price": 250000,
+      "totalSeats": 44,
+      "filledSeats": 5,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Malang",
+      "destinasi": "Purwokerto",
+      "price": 100000,
+      "totalSeats": 40,
+      "filledSeats": 20,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Makassar",
+      "destinasi": "Lampung",
+      "price": 300000,
+      "totalSeats": 40,
+      "filledSeats": 19,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Tegal",
+      "destinasi": "Pekanbaru",
+      "price": 200000,
+      "totalSeats": 32,
+      "filledSeats": 28,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Bandung",
+      "destinasi": "Madiun",
+      "price": 250000,
+      "totalSeats": 40,
+      "filledSeats": 39,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Banyuwangi",
+      "destinasi": "Bandung",
+      "price": 250000,
+      "totalSeats": 28,
+      "filledSeats": 21,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Cirebon",
+      "destinasi": "Madiun",
+      "price": 120000,
+      "totalSeats": 32,
+      "filledSeats": 1,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Lampung",
+      "destinasi": "Bogor",
+      "price": 100000,
+      "totalSeats": 28,
+      "filledSeats": 4,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Probolinggo",
+      "destinasi": "Banyuwangi",
+      "price": 250000,
+      "totalSeats": 40,
+      "filledSeats": 23,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Bandung",
+      "destinasi": "Jember",
+      "price": 200000,
+      "totalSeats": 32,
+      "filledSeats": 28,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Bogor",
+      "destinasi": "Probolinggo",
+      "price": 120000,
+      "totalSeats": 28,
+      "filledSeats": 18,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Balikpapan",
+      "destinasi": "Padang",
+      "price": 150000,
+      "totalSeats": 40,
+      "filledSeats": 17,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Jakarta",
+      "destinasi": "Madiun",
+      "price": 350000,
+      "totalSeats": 32,
+      "filledSeats": 31,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Purwokerto",
+      "destinasi": "Yogyakarta",
+      "price": 300000,
+      "totalSeats": 40,
+      "filledSeats": 16,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Jember",
+      "destinasi": "Palembang",
+      "price": 100000,
+      "totalSeats": 44,
+      "filledSeats": 12,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Surabaya",
+      "destinasi": "Bogor",
+      "price": 100000,
+      "totalSeats": 32,
+      "filledSeats": 28,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Lampung",
+      "destinasi": "Balikpapan",
+      "price": 350000,
+      "totalSeats": 28,
+      "filledSeats": 17,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Palembang",
+      "destinasi": "Malang",
+      "price": 350000,
+      "totalSeats": 32,
+      "filledSeats": 23,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Yogyakarta",
+      "destinasi": "Solo",
+      "price": 300000,
+      "totalSeats": 32,
+      "filledSeats": 15,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Balikpapan",
+      "destinasi": "Purwokerto",
+      "price": 300000,
+      "totalSeats": 48,
+      "filledSeats": 23,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Semarang",
+      "destinasi": "Jember",
+      "price": 175000,
+      "totalSeats": 28,
+      "filledSeats": 2,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Tegal",
+      "destinasi": "Madiun",
+      "price": 250000,
+      "totalSeats": 44,
+      "filledSeats": 33,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Kediri",
+      "destinasi": "Surabaya",
+      "price": 100000,
+      "totalSeats": 32,
+      "filledSeats": 20,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Bogor",
+      "destinasi": "Lampung",
+      "price": 120000,
+      "totalSeats": 48,
+      "filledSeats": 22,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Banyuwangi",
+      "destinasi": "Kediri",
+      "price": 250000,
+      "totalSeats": 32,
+      "filledSeats": 8,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Bandung",
+      "destinasi": "Yogyakarta",
+      "price": 175000,
+      "totalSeats": 48,
+      "filledSeats": 9,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Malang",
+      "destinasi": "Makassar",
+      "price": 350000,
+      "totalSeats": 32,
+      "filledSeats": 22,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Surabaya",
+      "destinasi": "Medan",
+      "price": 120000,
+      "totalSeats": 32,
+      "filledSeats": 17,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Jember",
+      "destinasi": "Purwokerto",
+      "price": 120000,
+      "totalSeats": 28,
+      "filledSeats": 16,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Kediri",
+      "destinasi": "Semarang",
+      "price": 85000,
+      "totalSeats": 32,
+      "filledSeats": 21,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Surabaya",
+      "destinasi": "Bandung",
+      "price": 150000,
+      "totalSeats": 48,
+      "filledSeats": 16,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Pekanbaru",
+      "destinasi": "Jember",
+      "price": 350000,
+      "totalSeats": 28,
+      "filledSeats": 15,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Banyuwangi",
+      "destinasi": "Palembang",
+      "price": 250000,
+      "totalSeats": 44,
+      "filledSeats": 15,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Bogor",
+      "destinasi": "Surabaya",
+      "price": 300000,
+      "totalSeats": 28,
+      "filledSeats": 5,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Bekasi",
+      "destinasi": "Bogor",
+      "price": 120000,
+      "totalSeats": 32,
+      "filledSeats": 21,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Tegal",
+      "destinasi": "Makassar",
+      "price": 120000,
+      "totalSeats": 40,
+      "filledSeats": 25,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Cirebon",
+      "destinasi": "Purwokerto",
+      "price": 150000,
+      "totalSeats": 28,
+      "filledSeats": 10,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Yogyakarta",
+      "destinasi": "Medan",
+      "price": 120000,
+      "totalSeats": 44,
+      "filledSeats": 15,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Bandung",
+      "destinasi": "Palembang",
+      "price": 250000,
+      "totalSeats": 44,
+      "filledSeats": 39,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Malang",
+      "destinasi": "Makassar",
+      "price": 200000,
+      "totalSeats": 48,
+      "filledSeats": 46,
+      "VehicleTypeId": 2
+    },
+    {
+      "tujuan": "Probolinggo",
+      "destinasi": "Malang",
+      "price": 300000,
+      "totalSeats": 44,
+      "filledSeats": 32,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Palembang",
+      "destinasi": "Bekasi",
+      "price": 250000,
+      "totalSeats": 28,
+      "filledSeats": 2,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Bogor",
+      "destinasi": "Denpasar",
+      "price": 85000,
+      "totalSeats": 32,
+      "filledSeats": 22,
+      "VehicleTypeId": 1
+    },
+    {
+      "tujuan": "Palembang",
+      "destinasi": "Bekasi",
+      "price": 300000,
+      "totalSeats": 48,
+      "filledSeats": 41,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Purwokerto",
+      "destinasi": "Jakarta",
+      "price": 120000,
+      "totalSeats": 28,
+      "filledSeats": 13,
+      "VehicleTypeId": 3
+    },
+    {
+      "tujuan": "Madiun",
+      "destinasi": "Balikpapan",
+      "price": 85000,
+      "totalSeats": 44,
+      "filledSeats": 23,
+      "VehicleTypeId": 4
+    },
+    {
+      "tujuan": "Bandung",
+      "destinasi": "Kediri",
+      "price": 200000,
+      "totalSeats": 48,
+      "filledSeats": 12,
+      "VehicleTypeId": 5
+    },
+    {
+      "tujuan": "Palembang",
+      "destinasi": "Surabaya",
+      "price": 300000,
+      "totalSeats": 44,
+      "filledSeats": 32,
+      "VehicleTypeId": 5
+    }
+  ],
+  "VehicleTypes": [
+    {
+      "typeBrand": "Mercedes-Benz",
+      "typeSeries": "OH 1626"
+    },
+    {
+      "typeBrand": "Hino",
+      "typeSeries": "RK8 R260"
+    },
+    {
+      "typeBrand": "Scania",
+      "typeSeries": "K360IB"
+    },
+    {
+      "typeBrand": "Volvo",
+      "typeSeries": "B11R"
+    },
+    {
+      "typeBrand": "Toyota",
+      "typeSeries": "HiAce Commuter"
+    }
+  ]
+}

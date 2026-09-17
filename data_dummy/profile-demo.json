@@ -1,0 +1,142 @@
+[
+    {
+      "nama": "Budi Nugroho",
+      "foto": "https://storage.example.com/profiles/budinugroho251.jpg",
+      "ktp": "5255341928327648",
+      "phoneNumber": "083503056413",
+      "UserId": 1
+    },
+    {
+      "nama": "Umi Yulianti",
+      "foto": "https://storage.example.com/profiles/umiyulianti898.jpg",
+      "ktp": "8932528809570154",
+      "phoneNumber": "083039117182",
+      "UserId": 2
+    },
+    {
+      "nama": "Rudi Wibowo",
+      "foto": "https://storage.example.com/profiles/rudiwibowo970.jpg",
+      "ktp": "1333872624731781",
+      "phoneNumber": "080801326773",
+      "UserId": 3
+    },
+    {
+      "nama": "Sinta Permata",
+      "foto": "https://storage.example.com/profiles/sintapermata925.jpg",
+      "ktp": "1079911838425135",
+      "phoneNumber": "084278498084",
+      "UserId": 4
+    },
+    {
+      "nama": "Umi Pratama",
+      "foto": "https://storage.example.com/profiles/umipratama962.jpg",
+      "ktp": "3226025634216073",
+      "phoneNumber": "083754330365",
+      "UserId": 5
+    },
+    {
+      "nama": "Hendra Kusuma",
+      "foto": "https://storage.example.com/profiles/hendrakusuma991.jpg",
+      "ktp": "9468044369957773",
+      "phoneNumber": "088721489513",
+      "UserId": 6
+    },
+    {
+      "nama": "Lukman Rahmawati",
+      "foto": "https://storage.example.com/profiles/lukmanrahmawati231.jpg",
+      "ktp": "4714345581223623",
+      "phoneNumber": "081665876036",
+      "UserId": 7
+    },
+    {
+      "nama": "Bambang Yulianti",
+      "foto": "https://storage.example.com/profiles/bambangyulianti969.jpg",
+      "ktp": "1003309232719374",
+      "phoneNumber": "085299124190",
+      "UserId": 8
+    },
+    {
+      "nama": "Umi Rahmawati",
+      "foto": "https://storage.example.com/profiles/umirahmawati590.jpg",
+      "ktp": "2735454948083136",
+      "phoneNumber": "087837770143",
+      "UserId": 9
+    },
+    {
+      "nama": "Bambang Setiawan",
+      "foto": "https://storage.example.com/profiles/bambangsetiawan314.jpg",
+      "ktp": "0229413186999386",
+      "phoneNumber": "087749649909",
+      "UserId": 10
+    },
+    {
+      "nama": "Nanda Pratama",
+      "foto": "https://storage.example.com/profiles/nandapratama971.jpg",
+      "ktp": "9904902787429671",
+      "phoneNumber": "087565512567",
+      "UserId": 11
+    },
+    {
+      "nama": "Wati Permata",
+      "foto": "https://storage.example.com/profiles/watipermata834.jpg",
+      "ktp": "2146584044997278",
+      "phoneNumber": "087558867533",
+      "UserId": 12
+    },
+    {
+      "nama": "Indah Permata",
+      "foto": "https://storage.example.com/profiles/indahpermata240.jpg",
+      "ktp": "2400504556238692",
+      "phoneNumber": "082219693792",
+      "UserId": 13
+    },
+    {
+      "nama": "Lestari Halim",
+      "foto": "https://storage.example.com/profiles/lestarihalim654.jpg",
+      "ktp": "4709521456232858",
+      "phoneNumber": "088424745171",
+      "UserId": 14
+    },
+    {
+      "nama": "Rudi Setiawan",
+      "foto": "https://storage.example.com/profiles/rudisetiawan881.jpg",
+      "ktp": "5377351585064317",
+      "phoneNumber": "081390053293",
+      "UserId": 15
+    },
+    {
+      "nama": "Andi Kurniawan",
+      "foto": "https://storage.example.com/profiles/andikurniawan213.jpg",
+      "ktp": "9985698478961183",
+      "phoneNumber": "086736576615",
+      "UserId": 16
+    },
+    {
+      "nama": "Ayu Firmansyah",
+      "foto": "https://storage.example.com/profiles/ayufirmansyah682.jpg",
+      "ktp": "5022961201836675",
+      "phoneNumber": "082545991022",
+      "UserId": 17
+    },
+    {
+      "nama": "Oki Maulana",
+      "foto": "https://storage.example.com/profiles/okimaulana51.jpg",
+      "ktp": "5161369681645352",
+      "phoneNumber": "081818835523",
+      "UserId": 18
+    },
+    {
+      "nama": "Dewi Saputra",
+      "foto": "https://storage.example.com/profiles/dewisaputra263.jpg",
+      "ktp": "5182037788925546",
+      "phoneNumber": "086590515186",
+      "UserId": 19
+    },
+    {
+      "nama": "Wati Nugroho",
+      "foto": "https://storage.example.com/profiles/watinugroho742.jpg",
+      "ktp": "7065379473834735",
+      "phoneNumber": "089774688623",
+      "UserId": 20
+    }
+]

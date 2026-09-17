@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Cahaya Travel</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <% if(error)  {%>
+    <div style="color: red;">
+        <%= error %>
+    </div>
+    <% } %>
+    <form action="/user/register" method="post">
+        <p>Email:</p>
+        <input type="text" name="email">
+        <p>Password:</p>
+        <input type="password" name="password">
+        <p>Role:</p>
+        <select name="role">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select><br><br>
+        <p>Name:</p>
+        <input type="text" name="nama">
+        <p>Photo:</p>
+        <input type="text" name="foto">
+        <p>KTP:</p>
+        <input type="text" name="ktp">
+        <p>Phone Number:</p>
+        <input type="text" name="phoneNumber">
+        <input type="submit" value="Register">
+    </form>
+    <br>
+    Already have an account? <a href="/user/login">Login</a>
+</body>
+</html>
