@@ -4,20 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Cahaya Travel</title>
+    
+    <style>
+        /* Reset margin & padding dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Warna latar belakang abu-abu terang */
+            color: #333;
+            display: flex;
+            justify-content: center; /* Posisikan ke tengah secara horizontal */
+            align-items: center; /* Posisikan ke tengah secara vertikal */
+            min-height: 100vh; /* Tinggi minimal menutupi seluruh layar */
+            padding: 20px;
+        }
+
+        /* Container Login bergaya Kartu (Card) */
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Judul Login */
+        h1 {
+            color: #0056b3; /* Biru Cahaya Travel */
+            font-size: 2rem;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        /* Pesan Error (Alert) */
+        .alert-danger {
+            background-color: #ffe6e6;
+            color: #cc0000;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #ffb3b3;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        /* Styling Form */
+        form {
+            text-align: left; /* Teks di dalam form rata kiri */
+        }
+
+        form label {
+            font-weight: 600;
+            color: #444;
+            display: block;
+            margin-bottom: 8px;
+            margin-top: 15px;
+        }
+
+        form label:first-child {
+            margin-top: 0;
+        }
+
+        /* Styling Input Box */
+        form input[type="text"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background-color: #fff;
+        }
+
+        form input[type="text"]:focus,
+        form input[type="password"]:focus {
+            border-color: #0056b3;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+        }
+
+        /* Tombol Login */
+        form input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color: #ff8c00; /* Oranye Cahaya Travel */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #e67e00;
+        }
+
+        form input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+
+        /* Tautan Register (Bawah) */
+        .register-link {
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .register-link a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .register-link a:hover {
+            color: #004494;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Login</h1>
-    <% if(error)  {%>
-        <p style="color: red;"><%= error %></p>
-    <% } %>
-    <form action="/user/login" method="post">
-        <p>Email:</p>
-        <input type="text" name="email">
-        <p>Password:</p>
-        <input type="password" name="password"><br>
-        <input type="submit" value="Login">
-    </form>
-    <br>
-    Don't have an account? <a href="/user/register">Register</a>
+    
+    <div class="login-container">
+        <h1>Login</h1>
+        
+        <!-- Pesan Error EJS -->
+        <% if(error) { %>
+            <div class="alert-danger"><%= error %></div>
+        <% } %>
+        
+        <form action="/user/login" method="post">
+            <!-- Menggunakan <label> untuk menggantikan <p> -->
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" placeholder="Masukkan email Anda" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Masukkan password Anda" required>
+            
+            <input type="submit" value="Login">
+        </form>
+        
+        <div class="register-link">
+            Don't have an account? <a href="/user/register">Register</a>
+        </div>
+    </div>
+
 </body>
 </html>

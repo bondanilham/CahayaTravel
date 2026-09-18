@@ -4,20 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage | Cahaya Travel</title>
+    
+    <!-- Posisikan Style DI DALAM tag Head -->
+    <style>
+        /* Reset margin & padding dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Warna latar belakang abu-abu terang */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px; /* Diubah agar tidak bentrok dengan padding-top 90px dari header.ejs */
+        }
+
+        /* Styling Teks Header */
+        h1 {
+            color: #0056b3; /* Biru travel */
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            text-align: center;
+            max-width: 500px;
+            line-height: 1.5;
+        }
+
+        /* Styling Container Form (Card) */
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Styling Label */
+        form label {
+            font-weight: 600;
+            color: #444;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        /* Styling Input Text & Number */
+        form input[type="text"],
+        form input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            margin-bottom: 15px; /* Jarak rapi tanpa tag br */
+        }
+
+        /* Efek saat input diklik/fokus */
+        form input[type="text"]:focus,
+        form input[type="number"]:focus {
+            border-color: #0056b3;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+        }
+
+        /* Styling Tombol Submit */
+        form input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color: #ff8c00; /* Warna oranye (Cahaya) */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            margin-top: 10px;
+        }
+
+        /* Efek Hover saat kursor di atas tombol */
+        form input[type="submit"]:hover {
+            background-color: #e67e00;
+        }
+
+        /* Efek saat tombol diklik */
+        form input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+    </style>
 </head>
 <body>
     <%- include('partials/header') %>
+    
     <h1>Cahaya Travel</h1>
     <p>Solusi mudah pesan travel. Makin mudah dengan pembayaran menggunakan QR Code!</p>
-    <div>
+    
+    <!-- Menggunakan class .form-container agar styling div tidak bertabrakan jika ada div lain -->
+    <div class="form-container">
         <form action="/find-armada" method="get">
-            <label for="keberangkatan">Keberangkatan</label><br>
-            <input type="text" name="keberangkatan" id="keberangkatan"><br><br>
-            <label for="destinasi">Destinasi</label><br>
-            <input type="text" name="destinasi" id="destinasi"><br><br>
-            <label for="penumpang">Jumlah Penumpang</label><br>
-            <input type="number" name="penumpang" id=""><br><br>
-            <input type="submit" value="🔍Cari">
+            <!-- Tag <br> dihapus, layout diatur sepenuhnya oleh CSS -->
+            <label for="keberangkatan">Keberangkatan</label>
+            <input type="text" name="keberangkatan" id="keberangkatan" placeholder="Contoh: Jakarta">
+            
+            <label for="destinasi">Destinasi</label>
+            <input type="text" name="destinasi" id="destinasi" placeholder="Contoh: Bandung">
+            
+            <label for="penumpang">Jumlah Penumpang</label>
+            <input type="number" name="penumpang" id="penumpang" min="1" placeholder="Contoh: 2">
+            
+            <input type="submit" value="🔍 Cari">
         </form>
     </div>
 </body>

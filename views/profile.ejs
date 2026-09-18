@@ -4,35 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile | Cahaya Travel</title>
+    
+    <style>
+        /* Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Warna latar belakang abu-abu terang */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Container Profile bergaya Kartu (Card) */
+        .profile-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            margin-top: 20px;
+        }
+
+        /* Judul Halaman */
+        h1 {
+            color: #0056b3; /* Biru travel */
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        /* Styling Notifikasi (Alerts) */
+        .alert {
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .alert-success {
+            background-color: #e6f4ea; /* Hijau pudar */
+            color: #1e7e34;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-danger {
+            background-color: #ffe6e6; /* Merah pudar */
+            color: #cc0000;
+            border: 1px solid #ffb3b3;
+        }
+
+        /* Styling Label Formulir */
+        form label {
+            font-weight: 600;
+            color: #444;
+            display: block;
+            margin-bottom: 8px;
+            margin-top: 15px;
+        }
+
+        form label:first-child {
+            margin-top: 0;
+        }
+
+        /* Styling Input Text */
+        form input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background-color: #fff;
+        }
+
+        form input[type="text"]:focus {
+            border-color: #0056b3;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+        }
+
+        /* Tombol Edit/Update */
+        form input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color: #0056b3; /* Biru untuk update data */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #004494;
+        }
+
+        form input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+
+        /* Tombol Hapus (Khusus Admin) */
+        .btn-delete {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            background-color: #dc3545; /* Merah bahaya */
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+
+        .btn-delete:active {
+            transform: scale(0.98);
+        }
+
+    </style>
 </head>
 <body>
     <%- include('partials/header') %>
-    <h1>Profile</h1>
-    <% if (success) { %>
-    <div style="color: green;">
-        <%= success %>
+    
+    <div class="profile-container">
+        <h1>Profile</h1>
+        
+        <!-- Notifikasi Sukses / Error -->
+        <% if (success) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div>
+        <% } else if(error) { %>
+            <div class="alert alert-danger">
+                <%= error %>
+            </div>
+        <% } %>
+        
+        <!-- Form Profile -->
+        <form action="/profile/<%= dataProfile.id %>" method="post">
+            
+            <label for="nama">Name:</label>
+            <input type="text" name="nama" id="nama" value="<%= dataProfile.nama %>">
+            
+            <label for="foto">Photo (URL):</label>
+            <input type="text" name="foto" id="foto" value="<%= dataProfile.foto %>">
+            
+            <label for="ktp">KTP:</label>
+            <input type="text" name="ktp" id="ktp" value="<%= dataProfile.ktp %>">
+            
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" name="phoneNumber" id="phoneNumber" value="<%= dataProfile.phoneNumber %>">
+            
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" value="<%= dataProfile.User.email %>">
+            
+            <input type="submit" value="Simpan Perubahan">
+        </form>
+
+        <!-- Tombol Hapus Khusus Admin -->
+        <% if (sesi.role === 'admin') { %>
+            <a href="/profile/<%= dataProfile.id %>/delete" class="btn-delete">Hapus Akun</a>
+        <% } %>
     </div>
-    <% } else if(error) {%>
-    <div style="color: red;">
-        <%= error %>
-    </div>
-    <% } %>
-    <form action="/profile/<%= dataProfile.id %>" method="post">
-        <p>Name:</p>
-        <input type="text" name="nama" value="<%= dataProfile.nama %>">
-        <p>Photo:</p>
-        <input type="text" name="foto" value="<%= dataProfile.foto %>">
-        <p>KTP:</p>
-        <input type="text" name="ktp" value="<%= dataProfile.ktp %>">
-        <p>Phone Number:</p>
-        <input type="text" name="phoneNumber" value="<%= dataProfile.phoneNumber %>">
-        <p>Email:</p>
-        <input type="text" name="email" id="" value="<%= dataProfile.User.email %>"><br><br>
-        <input type="submit" value="Edit">
-    </form>
-    <br><br>
-    <% if (sesi.role === 'admin') { %>
-        <a href="/profile/<%= dataProfile.id %>/delete">Delete</a>
-    <% } %>
 </body>
 </html>

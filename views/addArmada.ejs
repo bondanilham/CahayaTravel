@@ -3,40 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Armada</title>
+    <title>Add Armada | Cahaya Travel</title>
+    
+    <style>
+        /* Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Warna latar abu-abu terang */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Container Form bergaya Kartu (Card) */
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            margin-top: 20px;
+        }
+
+        /* Judul Halaman */
+        h1 {
+            color: #0056b3; /* Biru travel */
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        /* Styling Pesan Error (Alert) */
+        .alert-danger {
+            background-color: #ffe6e6;
+            color: #cc0000;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid #ffb3b3;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Styling Label Formulir */
+        form label {
+            font-weight: 600;
+            color: #444;
+            display: block;
+            margin-bottom: 8px;
+            margin-top: 15px;
+        }
+
+        form label:first-child {
+            margin-top: 0;
+        }
+
+        /* Styling Input Text, Number & Select (Dropdown) */
+        form input[type="text"],
+        form input[type="number"],
+        form select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background-color: #fff;
+        }
+
+        /* Efek Fokus pada Input & Dropdown */
+        form input[type="text"]:focus,
+        form input[type="number"]:focus,
+        form select:focus {
+            border-color: #0056b3;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+        }
+
+        /* Styling Tombol Submit */
+        form input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color: #28a745; /* Hijau untuk aksi tambah/simpan */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        form input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+    </style>
 </head>
 <body>
     <%- include('partials/header') %>
-    <h1>Tambah Armada</h1>
+    
+    <div class="form-container">
+        <h1>Tambah Armada</h1>
 
-    <% if (error) { %>
-    <div style="color: red;">
-        <%= error %>
+        <!-- Menampilkan Error jika ada -->
+        <% if (error) { %>
+        <div class="alert-danger">
+            <%= error %>
+        </div>
+        <% } %>
+
+        <form action="/armada/add" method="post">
+            <label for="keberangkatan">Keberangkatan:</label>
+            <input type="text" name="keberangkatan" id="keberangkatan" placeholder="Contoh: Jakarta">
+
+            <label for="destinasi">Destinasi:</label>
+            <input type="text" name="destinasi" id="destinasi" placeholder="Contoh: Yogyakarta">
+
+            <label for="price">Harga:</label>
+            <input type="number" name="price" id="price" placeholder="Contoh: 150000">
+
+            <label for="totalSeats">Total Kursi:</label>
+            <input type="number" name="totalSeats" id="totalSeats" placeholder="Contoh: 12">
+
+            <label for="VehicleTypeId">Tipe Kendaraan:</label>
+            <select name="VehicleTypeId" id="VehicleTypeId">
+                <option value="" disabled selected>-- Pilih Kendaraan --</option>
+                <% vehicleTypes.forEach(vt => { %>
+                    <option value="<%= vt.id %>"><%= vt.typeBrand %> <%= vt.typeSeries %></option>
+                <% }) %>
+            </select>
+
+            <input type="submit" value="Tambah Armada">
+        </form>
     </div>
-    <% } %>
-
-    <form action="/armada/add" method="post">
-        <p>Keberangkatan:</p>
-        <input type="text" name="keberangkatan">
-
-        <p>Destinasi:</p>
-        <input type="text" name="destinasi">
-
-        <p>Harga:</p>
-        <input type="number" name="price">
-
-        <p>Total Kursi:</p>
-        <input type="number" name="totalSeats">
-
-        <p>Tipe Kendaraan:</p>
-        <select name="VehicleTypeId">
-            <% vehicleTypes.forEach(vt => { %>
-                <option value="<%= vt.id %>"><%= vt.typeBrand %> <%= vt.typeSeries %></option>
-            <% }) %>
-        </select>
-
-        <br><br>
-        <input type="submit" value="Tambah Armada">
-    </form>
 </body>
 </html>

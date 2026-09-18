@@ -4,16 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile List | Cahaya Travel</title>
+    
+    <style>
+        /* Reset margin & padding dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Warna latar belakang abu-abu terang */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Container Utama bergaya Kartu (Card) */
+        .table-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1000px; /* Lebih lebar untuk tabel data */
+            overflow-x: auto; /* Agar tabel bisa di-scroll ke samping di layar kecil */
+        }
+
+        /* Judul Halaman */
+        h1 {
+            color: #0056b3;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        /* Notifikasi Hapus (Alert) */
+        .alert-danger {
+            background-color: #ffe6e6;
+            color: #cc0000;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid #ffb3b3;
+            font-weight: 600;
+        }
+
+        /* Styling Tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            min-width: 600px; /* Mencegah tabel terlalu menyempit */
+        }
+
+        th, td {
+            padding: 14px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0056b3;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Styling Tombol Aksi */
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            text-align: center;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Tombol Detail (Biru Muda/Cyan) */
+        .btn-detail {
+            background-color: #17a2b8;
+        }
+
+        .btn-detail:hover {
+            background-color: #138496;
+        }
+
+        /* Tombol Delete (Merah) */
+        .btn-delete {
+            background-color: #dc3545;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+
+    </style>
 </head>
 <body>
     <%- include('partials/header') %>
-    <div>
+    
+    <div class="table-container">
+        <h1>Daftar Profil Pengguna</h1>
+        
+        <!-- Pesan Notifikasi (EJS) -->
         <% if(hapus) { %>
-            <p style="color: red;">User <%= hapus %> telah dihapus.</p>
+            <div class="alert-danger">
+                User <strong><%= hapus %></strong> telah dihapus.
+            </div>
         <% } %>
-    </div>
-    <div>
-        <table border="1">
+
+        <table>
             <tr>
                 <th>Name</th>
                 <th>User ID</th>
@@ -21,20 +142,19 @@
                 <th>Phone Number</th>
                 <th>Action</th>
             </tr>
+            
             <% admin.forEach(el => { %>
             <tr>
-                <th><%= el.nama %></th>
-                <th><%= el.UserId %></th>
-                <th><%= el.ktp %></th>
-                <th><%= el.phoneNumber %></th>
-                <th>
-                    <a href="/profile/<%= el.id %>">
-                        <button>Detail</button>
-                    </a>
-                    <a href="/profile/<%= el.id %>/delete">
-                        <button>Delete</button>
-                    </a>
-                </th>
+                <!-- Diubah menjadi <td> agar secara hierarki HTML lebih tepat -->
+                <td><%= el.nama %></td>
+                <td><%= el.UserId %></td>
+                <td><%= el.ktp %></td>
+                <td><%= el.phoneNumber %></td>
+                <td class="action-buttons">
+                    <!-- Link diubah tampilannya menjadi tombol via CSS -->
+                    <a href="/profile/<%= el.id %>" class="btn btn-detail">Detail</a>
+                    <a href="/profile/<%= el.id %>/delete" class="btn btn-delete">Delete</a>
+                </td>
             </tr>
             <% }) %>
         </table>

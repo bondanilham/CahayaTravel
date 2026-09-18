@@ -4,68 +4,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Armada | Cahaya Travel</title>
+    
+    <style>
+        /* Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* Container Flexbox untuk Layout Kiri & Kanan */
+        .main-container {
+            display: flex;
+            flex-wrap: wrap; /* Agar turun ke bawah di layar kecil (HP) */
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: flex-start; /* Mencegah kolom memanjang ke bawah mengikuti kolom sebelahnya */
+        }
+
+        /* -----------------------
+           KOLOM KIRI (FORM)
+        ------------------------ */
+        .left-column {
+            flex: 0 0 320px; /* Lebar kolom kiri tetap 320px */
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-column label {
+            font-weight: 600;
+            color: #444;
+            display: inline-block;
+            margin-bottom: 8px;
+            margin-top: 15px;
+        }
+
+        .left-column label:first-child {
+            margin-top: 0; /* Hapus margin atas untuk label pertama */
+        }
+
+        .left-column input[type="text"],
+        .left-column input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        
+        .left-column input:focus {
+            border-color: #0056b3;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+        }
+
+        .left-column input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .left-column input[type="submit"]:hover {
+            background-color: #e67e00;
+        }
+
+        /* -----------------------
+           KOLOM KANAN (NAMA WEB & TABEL)
+        ------------------------ */
+        .right-column {
+            flex: 1; /* Mengisi sisa ruang kosong di sebelah kanan */
+            min-width: 300px; /* Batas kecil untuk responsif */
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .right-column h1 {
+            color: #0056b3;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        /* Styling Tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Styling Tombol Aksi dalam Tabel */
+        td a {
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        /* Tombol Beli (Hijau) */
+        a[href*="/beli/"] {
+            background-color: #28a745; 
+        }
+        a[href*="/beli/"]:hover {
+            background-color: #218838;
+        }
+
+        /* Tombol Delete (Merah) */
+        a[href*="/delete-armada/"] {
+            background-color: #dc3545;
+        }
+        a[href*="/delete-armada/"]:hover {
+            background-color: #c82333;
+        }
+
+        /* -----------------------
+           RESPONSIF UNTUK HP
+        ------------------------ */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column; /* Ubah orientasi menjadi atas-bawah */
+                padding: 20px;
+            }
+            .left-column {
+                width: 100%;
+                flex: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <%- include('partials/header') %>
-    <div>
-        <form action="/find-armada" method="get">
-            <label for="keberangkatan">Keberangkatan</label><br>
-            <input type="text" name="keberangkatan" id="keberangkatan" value="<%= keberangkatan %>"><br><br>
-            <label for="destinasi">Destinasi</label><br>
-            <input type="text" name="destinasi" id="destinasi" value="<%= destinasi %>"><br><br>
-            <label for="penumpang">Jumlah Penumpang</label><br>
-            <input type="number" name="penumpang" id="" value="<%= penumpang %>"><br><br>
-            <input type="submit" value="🔍Cari">
-        </form>
-    </div><br>
-    <table border="1">
-        <tr>
-            <th>
-                No
-            </th>
-            <th>
-                Keberangkatan
-            </th>
-            <th>
-                Destinasi
-            </th>
-            <th>
-                Sisa Kursi
-            </th>
-            <th>
-                Harga
-            </th>
-            <th>
-                Action
-            </th>
-        </tr>
-        <% armada.forEach((element, index) => { %>
-        <tr>
-            <td>
-                <%= index +1 %>
-            </td>
-            <td>
-                <%= element.keberangkatan %>
-            </td>
-            <td>
-                <%= element.destinasi %>
-            </td>
-            <td>
-                <%= element.sisaKursi %>
-            </td>
-            <td>
-                <%= formatRupiah(element.price) %>
-            </td>
-            <td>
-                <a href="/find-armada/beli/<%= element.id %>?penumpang=<%= penumpang %>">Beli</a>
-                <% if (sesi) { %>
-                    <% if (sesi.role === 'admin') { %>
-                    <a href="/delete-armada/<%= element.id %>">Delete</a>
-                    <% } %>
-                <% } %>
-            </td>
-        </tr>
-        <% }) %>
-    </table>
+    
+    <!-- Wrapper Utama Flexbox -->
+    <div class="main-container">
+        
+        <!-- BAGIAN KIRI: Form Pencarian -->
+        <div class="left-column">
+            <form action="/find-armada" method="get">
+                <label for="keberangkatan">Keberangkatan</label>
+                <input type="text" name="keberangkatan" id="keberangkatan" value="<%= keberangkatan %>">
+                
+                <label for="destinasi">Destinasi</label>
+                <input type="text" name="destinasi" id="destinasi" value="<%= destinasi %>">
+                
+                <label for="penumpang">Jumlah Penumpang</label>
+                <input type="number" name="penumpang" id="penumpang" value="<%= penumpang %>">
+                
+                <input type="submit" value="🔍 Cari">
+            </form>
+        </div>
+
+        <!-- BAGIAN KANAN: Nama Web & Hasil Tabel (EJS) -->
+        <div class="right-column">
+            <h1>Cahaya Travel - Hasil Pencarian</h1>
+            
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Keberangkatan</th>
+                    <th>Destinasi</th>
+                    <th>Sisa Kursi</th>
+                    <th>Harga</th>
+                    <th>Action</th>
+                </tr>
+                
+                <% armada.forEach((element, index) => { %>
+                <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= element.keberangkatan %></td>
+                    <td><%= element.destinasi %></td>
+                    <td><%= element.sisaKursi %></td>
+                    <td><%= formatRupiah(element.price) %></td>
+                    <td>
+                        <a href="/find-armada/beli/<%= element.id %>?penumpang=<%= penumpang %>">Beli</a>
+                        <% if (sesi) { %>
+                            <% if (sesi.role === 'admin') { %>
+                            <a href="/delete-armada/<%= element.id %>">Delete</a>
+                            <% } %>
+                        <% } %>
+                    </td>
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+        
+    </div>
 </body>
 </html>

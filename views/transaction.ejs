@@ -4,44 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaksi | Cahaya Travel</title>
+    
+    <style>
+        /* Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Warna latar belakang abu-abu terang */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Container Tabel bergaya Kartu */
+        .table-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1100px;
+            overflow-x: auto; /* Agar tabel bisa digeser di HP */
+            margin-top: 20px;
+        }
+
+        /* Judul Halaman */
+        h1 {
+            color: #0056b3; /* Biru travel */
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        /* Styling Tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            min-width: 750px; /* Lebar minimum agar tabel tidak hancur di layar kecil */
+        }
+
+        th, td {
+            padding: 14px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0056b3;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Baris Kosong (Belum ada transaksi) */
+        .empty-state {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 20px;
+        }
+
+        /* Container Tombol Aksi */
+        .action-buttons {
+            display: flex;
+            gap: 10px; /* Jarak antar tombol */
+            align-items: center;
+        }
+
+        /* Hapus margin bawaan form agar tombol sejajar */
+        .action-buttons form {
+            margin: 0;
+        }
+
+        /* Styling Dasar Tombol */
+        .btn {
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            display: inline-block;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Tombol Bayar (Hijau) */
+        .btn-pay {
+            background-color: #28a745;
+        }
+        .btn-pay:hover {
+            background-color: #218838;
+        }
+
+        /* Tombol Cancel (Merah) */
+        .btn-cancel {
+            background-color: #dc3545;
+        }
+        .btn-cancel:hover {
+            background-color: #c82333;
+        }
+
+        /* Lencana (Badge) Status Pembayaran Selesai */
+        .status-badge {
+            background-color: #e6f4ea;
+            color: #1e7e34;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border: 1px solid #c3e6cb;
+            display: inline-block;
+        }
+
+    </style>
 </head>
 <body>
     <%- include('partials/header') %>
-    <h1>Riwayat Transaksi</h1>
-    <table border="1">
-        <tr>
-            <th>Nama</th>
-            <th>Jumlah Kursi Dipesan</th>
-            <th>Destinasi</th>
-            <th>Keberangkatan</th>
-            <th>Total Harga</th>
-            <th>Action</th>
-        </tr>
-    <% if (record.length === 0) { %>
-        <tr>
-            <td colspan="6">Belum ada transaksi.</td>
-        </tr>
-    <% } %>
-    <% record.forEach(el => { %>
-        <tr>
-            <td><%= el.User.Profile.nama%></td>
-            <td><%= el.jumlahKursi %></td>
-            <td><%= el.Armada.destinasi %></td>
-            <td><%= el.Armada.keberangkatan %></td>
-            <td><%= formatRupiah(el.totalHarga) %></td>
-            <td>
-                <% if (el.paymentStatus === 'Belum Dibayar') { %>
-                <a href="/transactionHistory/<%= el.id %>/payment">Bayar</a>
-                <form action="/transactionHistory/<%= el.id %>/cancel" method="post">
-                    <input type="submit" value="Cancel" style="color: red;">
-                    <!-- <button type="submit" style="color: red;">Cancel</button> -->
-                </form>
-                <% } else { %>
-                <%= el.paymentStatus %>
-                <% } %>
-            </td>
-        </tr>
-    <% }) %>
-    </table>
+    
+    <div class="table-container">
+        <h1>Riwayat Transaksi</h1>
+        
+        <table>
+            <tr>
+                <th>Nama</th>
+                <th>Jumlah Kursi Dipesan</th>
+                <th>Destinasi</th>
+                <th>Keberangkatan</th>
+                <th>Total Harga</th>
+                <th>Action</th>
+            </tr>
+            
+            <!-- Kondisi jika tidak ada data -->
+            <% if (record.length === 0) { %>
+            <tr>
+                <td colspan="6" class="empty-state">Belum ada transaksi.</td>
+            </tr>
+            <% } %>
+            
+            <!-- Looping data transaksi -->
+            <% record.forEach(el => { %>
+            <tr>
+                <td><%= el.User.Profile.nama %></td>
+                <td><%= el.jumlahKursi %></td>
+                <td><%= el.Armada.destinasi %></td>
+                <td><%= el.Armada.keberangkatan %></td>
+                <td><%= formatRupiah(el.totalHarga) %></td>
+                
+                <td>
+                    <% if (el.paymentStatus === 'Belum Dibayar') { %>
+                        <div class="action-buttons">
+                            <!-- Link Bayar -->
+                            <a href="/transactionHistory/<%= el.id %>/payment" class="btn btn-pay">Bayar</a>
+                            
+                            <!-- Form Cancel dengan tag Button -->
+                            <form action="/transactionHistory/<%= el.id %>/cancel" method="post">
+                                <button type="submit" class="btn btn-cancel">Cancel</button>
+                            </form>
+                        </div>
+                    <% } else { %>
+                        <!-- Tampilan Status selain 'Belum Dibayar' (misal: Lunas/Cancelled) -->
+                        <span class="status-badge"><%= el.paymentStatus %></span>
+                    <% } %>
+                </td>
+            </tr>
+            <% }) %>
+        </table>
+    </div>
+
 </body>
 </html>

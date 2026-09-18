@@ -3,32 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detail Tiket | Cahaya Travel</title>
+    
+    <style>
+        /* Reset margin & padding dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Warna background abu-abu terang */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Container Utama bergaya Kartu (Card) */
+        .ticket-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+
+        /* Styling Judul */
+        h1 {
+            color: #0056b3; /* Biru travel */
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        /* Styling Tabel Detail Tiket */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            overflow: hidden; /* Agar border-radius pada tabel berfungsi */
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0056b3;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        td {
+            background-color: #f9f9f9;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* Styling Pesan Error */
+        .error-message {
+            background-color: #ffe6e6;
+            color: #cc0000;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid #ffb3b3;
+            font-weight: 600;
+        }
+
+        /* Styling Form */
+        form label {
+            font-weight: 600;
+            color: #444;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        form input[type="text"]:focus {
+            border-color: #0056b3;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+        }
+
+        /* Styling Tombol Beli */
+        form input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color: #28a745; /* Hijau untuk aksi sukses/beli */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        form input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+    </style>
 </head>
 <body>
     <%- include('partials/header') %>
-    Detail Tiket:
-    <table border="1">
-        <tr>
-            <th>
-                Keberangkatan:
-            </th>
-            <th>
-                Destinasi:
-            </th>
-        </tr>
-        <tr>
-            <td><%= armada.keberangkatan %></td>
-            <td><%= armada.destinasi %></td>
-        </tr>
-    </table>
-    <% if(error)  {%>
-        <p style="color: red;"><%= error %></p>
-    <% } %>
-    <form action="/find-armada/beli/<%= id %>" method="post">
-        Jumlah Penumpang:
-        <input type="text" name="jumlahPenumpang" id="" value="<%= penumpang %>">
-        <input type="submit" value="Beli">
-    </form>
+    
+    <div class="ticket-container">
+        <h1>Detail Tiket</h1>
+        
+        <table>
+            <tr>
+                <th>Keberangkatan</th>
+                <th>Destinasi</th>
+            </tr>
+            <tr>
+                <td><%= armada.keberangkatan %></td>
+                <td><%= armada.destinasi %></td>
+            </tr>
+        </table>
+
+        <!-- Pesan Error EJS -->
+        <% if(error) { %>
+            <div class="error-message">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <form action="/find-armada/beli/<%= id %>" method="post">
+            <!-- Label ditambahkan agar teks rapi -->
+            <label for="jumlahPenumpang">Jumlah Penumpang:</label>
+            <input type="text" name="jumlahPenumpang" id="jumlahPenumpang" value="<%= penumpang %>">
+            
+            <input type="submit" value="Beli Tiket">
+        </form>
+    </div>
 </body>
 </html>

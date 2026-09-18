@@ -3,24 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pembayaran</title>
+    <title>Pembayaran | Cahaya Travel</title>
+    
+    <style>
+        /* Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Latar belakang abu-abu terang */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Container Pembayaran bergaya Kartu (Card) */
+        .payment-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Judul */
+        h1 {
+            color: #0056b3; /* Biru travel */
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        /* Kotak Detail Transaksi (Gaya Struk) */
+        .transaction-details {
+            background-color: #f8f9fa;
+            border: 1px dashed #ccc;
+            border-radius: 8px;
+            padding: 15px 20px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .transaction-details p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            color: #555;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 5px;
+        }
+
+        .transaction-details p:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .transaction-details strong {
+            color: #333;
+        }
+
+        /* Sorotan Total Harga */
+        .total-price {
+            font-size: 1.2rem !important;
+            font-weight: bold;
+            color: #ff8c00 !important; /* Oranye khas Cahaya Travel */
+        }
+
+        /* Styling QR Code */
+        .qr-section p {
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .qr-image {
+            max-width: 200px;
+            width: 100%;
+            border: 3px solid #eaeaea;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        /* Tombol Bayar */
+        form button {
+            width: 100%;
+            padding: 14px;
+            background-color: #28a745; /* Hijau sukses */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            margin-bottom: 15px;
+        }
+
+        form button:hover {
+            background-color: #218838;
+        }
+
+        form button:active {
+            transform: scale(0.98);
+        }
+
+        /* Tautan Kembali */
+        .back-link {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
 <body>
     <%- include('partials/header') %>
-    <h1>Pembayaran</h1>
+    
+    <div class="payment-container">
+        <h1>Pembayaran</h1>
 
-    <p>Nama: <%= transaction.User.Profil %></p>
-    <p>Keberangkatan: <%= transaction.Armada.keberangkatan %></p>
-    <p>Destinasi: <%= transaction.Armada.destinasi %></p>
-    <p>Jumlah Kursi: <%= transaction.jumlahKursi %></p>
-    <p>Total Harga: <%= formatRupiah(transaction.totalHarga) %></p>
+        <!-- Kotak Detail Struk Transaksi -->
+        <div class="transaction-details">
+            <p><span>Nama:</span> <strong><%= transaction.User.Profil %></strong></p>
+            <p><span>Keberangkatan:</span> <strong><%= transaction.Armada.keberangkatan %></strong></p>
+            <p><span>Destinasi:</span> <strong><%= transaction.Armada.destinasi %></strong></p>
+            <p><span>Jumlah Kursi:</span> <strong><%= transaction.jumlahKursi %> Kursi</strong></p>
+            <p>
+                <span>Total Harga:</span> 
+                <strong class="total-price"><%= formatRupiah(transaction.totalHarga) %></strong>
+            </p>
+        </div>
 
-    <p>Scan QR untuk pembayaran</p>
-    <img src="<%= qr %>" alt="QR Code Pembayaran">
+        <!-- Bagian QR Code -->
+        <div class="qr-section">
+            <p>Silakan Scan QR Code di Bawah Ini</p>
+            <img src="<%= qr %>" alt="QR Code Pembayaran" class="qr-image">
+        </div>
 
-    <form action="/transactionHistory/<%= transaction.id %>/payment" method="post">
-        <button type="submit">Bayar</button>
-    </form>
-    <a href="/transactionHistory">Kembali ke halaman transaksi</a>
+        <!-- Tombol Aksi -->
+        <form action="/transactionHistory/<%= transaction.id %>/payment" method="post">
+            <button type="submit">Konfirmasi Pembayaran</button>
+        </form>
+        
+        <a href="/transactionHistory" class="back-link">← Kembali ke halaman transaksi</a>
+    </div>
 </body>
 </html>

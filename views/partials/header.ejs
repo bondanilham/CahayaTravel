@@ -1,21 +1,127 @@
+<style>
+    /* 1. Mendorong konten di SEMUA halaman ke bawah agar tidak tertimpa header */
+    body {
+        padding-top: 90px !important; 
+    }
+
+    /* 2. Styling khusus untuk Header / Navbar */
+    header {
+        background-color: #0056b3; 
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+        /* 3. Membuat header menempel statis di atap layar */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    /* Styling Teks Logo/Brand yang sekarang berupa Link (tag <a>) */
+    header .brand {
+        color: #ffffff;
+        font-size: 1.6rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-decoration: none; /* Menghilangkan garis bawah link */
+        transition: opacity 0.3s ease;
+    }
+
+    /* Efek sedikit meredup saat logo diklik atau disorot */
+    header .brand:hover {
+        opacity: 0.8;
+    }
+
+    /* Kumpulan Link Navigasi */
+    header nav {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Styling Link Menu */
+    header nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 8px 15px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    /* Efek saat menu dilewati kursor (Hover) */
+    header nav a:hover {
+        background-color: #ff8c00; 
+        color: #ffffff;
+    }
+
+    /* Tombol Login */
+    header nav a.login-btn {
+        background-color: #ff8c00;
+        font-weight: bold;
+    }
+    header nav a.login-btn:hover {
+        background-color: #e67e00;
+    }
+
+    /* Tombol Logout */
+    header nav a.logout-btn {
+        background-color: #dc3545;
+        font-weight: bold;
+    }
+    header nav a.logout-btn:hover {
+        background-color: #c82333;
+    }
+
+    /* Responsif untuk HP (Layar di bawah 768px) */
+    @media (max-width: 768px) {
+        body {
+            /* Header di HP lebih tinggi karena menu bertumpuk, dorong konten lebih jauh */
+            padding-top: 140px !important; 
+        }
+        header {
+            flex-direction: column; 
+            gap: 15px;
+            padding: 15px 20px;
+        }
+        header nav {
+            flex-wrap: wrap; 
+            justify-content: center;
+        }
+    }
+</style>
+
 <% if (sesi) { %>
     <header>
-        Cahaya Travel
-        <a href="/">Home</a>
-        <a href="/profile/<%= sesi.id %>">Profile</a>
-        <a href="/transactionHistory">Transaction</a>
-        <a href="/user/logout">Logout</a>
-        <% if (sesi.role === 'admin') { %>
-            <a href="/armada/add">Add Armada</a>
-        <a href="/profile/list">Profile List</a>
-        <% } %>
+        <!-- Tag div diubah menjadi a href="/" -->
+        <a href="/" class="brand">Cahaya Travel</a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/profile/<%= sesi.id %>">Profile</a>
+            <a href="/transactionHistory">Transaction</a>
+            
+            <% if (sesi.role === 'admin') { %>
+                <a href="/armada/add">Add Armada</a>
+                <a href="/profile/list">Profile List</a>
+            <% } %>
+            
+            <a href="/user/logout" class="logout-btn">Logout</a>
+        </nav>
     </header>
 <% } else { %>
- <header>
-        Cahaya Travel
-        <a href="/">Home</a>
-        <a href="/user/login">Profile</a>
-        <a href="/transactionHistory">Transaction</a>
-        <a href="/user/login">Login</a>
-</header>
+    <header>
+        <!-- Tag div diubah menjadi a href="/" -->
+        <a href="/" class="brand">Cahaya Travel</a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/user/login">Profile</a>
+            <a href="/transactionHistory">Transaction</a>
+            <a href="/user/login" class="login-btn">Login</a>
+        </nav>
+    </header>
 <% } %>
