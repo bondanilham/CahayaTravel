@@ -140,7 +140,6 @@
     <div class="register-container">
         <h1>Register</h1>
         
-        <!-- Pesan Error Dinamis dari EJS -->
         <% if(error) { %>
         <div class="alert-danger">
             <%= error %>
@@ -148,7 +147,6 @@
         <% } %>
         
         <form action="/user/register" method="post">
-            <!-- Label dan Input -->
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" placeholder="contoh@email.com" required>
             

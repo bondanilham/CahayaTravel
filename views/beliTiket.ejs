@@ -148,7 +148,6 @@
             </tr>
         </table>
 
-        <!-- Pesan Error EJS -->
         <% if(error) { %>
             <div class="error-message">
                 <%= error %>
@@ -156,7 +155,6 @@
         <% } %>
 
         <form action="/find-armada/beli/<%= id %>" method="post">
-            <!-- Label ditambahkan agar teks rapi -->
             <label for="jumlahPenumpang">Jumlah Penumpang:</label>
             <input type="text" name="jumlahPenumpang" id="jumlahPenumpang" value="<%= penumpang %>">
             

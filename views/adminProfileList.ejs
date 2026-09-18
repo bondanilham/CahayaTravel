@@ -127,7 +127,6 @@
     <div class="table-container">
         <h1>Daftar Profil Pengguna</h1>
         
-        <!-- Pesan Notifikasi (EJS) -->
         <% if(hapus) { %>
             <div class="alert-danger">
                 User <strong><%= hapus %></strong> telah dihapus.
@@ -145,13 +144,11 @@
             
             <% admin.forEach(el => { %>
             <tr>
-                <!-- Diubah menjadi <td> agar secara hierarki HTML lebih tepat -->
                 <td><%= el.nama %></td>
                 <td><%= el.UserId %></td>
                 <td><%= el.ktp %></td>
                 <td><%= el.phoneNumber %></td>
                 <td class="action-buttons">
-                    <!-- Link diubah tampilannya menjadi tombol via CSS -->
                     <a href="/profile/<%= el.id %>" class="btn btn-detail">Detail</a>
                     <a href="/profile/<%= el.id %>/delete" class="btn btn-delete">Delete</a>
                 </td>

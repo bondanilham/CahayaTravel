@@ -151,7 +151,6 @@
     <div class="profile-container">
         <h1>Profile</h1>
         
-        <!-- Notifikasi Sukses / Error -->
         <% if (success) { %>
             <div class="alert alert-success">
                 <%= success %>
@@ -162,7 +161,6 @@
             </div>
         <% } %>
         
-        <!-- Form Profile -->
         <form action="/profile/<%= dataProfile.id %>" method="post">
             
             <label for="nama">Name:</label>
@@ -183,7 +181,6 @@
             <input type="submit" value="Simpan Perubahan">
         </form>
 
-        <!-- Tombol Hapus Khusus Admin -->
         <% if (sesi.role === 'admin') { %>
             <a href="/profile/<%= dataProfile.id %>/delete" class="btn-delete">Hapus Akun</a>
         <% } %>

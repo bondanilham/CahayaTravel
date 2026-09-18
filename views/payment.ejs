@@ -143,7 +143,6 @@
     <div class="payment-container">
         <h1>Pembayaran</h1>
 
-        <!-- Kotak Detail Struk Transaksi -->
         <div class="transaction-details">
             <p><span>Nama:</span> <strong><%= transaction.User.Profil %></strong></p>
             <p><span>Keberangkatan:</span> <strong><%= transaction.Armada.keberangkatan %></strong></p>
@@ -155,13 +154,11 @@
             </p>
         </div>
 
-        <!-- Bagian QR Code -->
         <div class="qr-section">
             <p>Silakan Scan QR Code di Bawah Ini</p>
             <img src="<%= qr %>" alt="QR Code Pembayaran" class="qr-image">
         </div>
 
-        <!-- Tombol Aksi -->
         <form action="/transactionHistory/<%= transaction.id %>/payment" method="post">
             <button type="submit">Konfirmasi Pembayaran</button>
         </form>
